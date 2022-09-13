@@ -1,0 +1,93 @@
+{
+  "weth": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+  "tokens": {
+    "WXDAI": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+    "USDC": "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+    "LINK": "0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2",
+    "GNO": "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+    "WBTC": "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
+    "WETH": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1"
+  },
+  "vault": {
+    "vaults": [
+      {
+        "asset": "WXDAI",
+        "name": "Citrus Agave Leveraged WXDAI Vault",
+        "symbol": "clvagWXDAI",
+        "type": "aave-v2-leveraged",
+        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+        "maxCollateralRatio": 0.8,
+        "targetCollateralRatio": 0.75,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05,
+        "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
+        "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      },
+      {
+        "asset": "USDC",
+        "name": "Citrus Agave Leveraged USDC Vault",
+        "symbol": "clvagUSDC",
+        "type": "aave-v2-leveraged",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+        "maxCollateralRatio": 0.8,
+        "targetCollateralRatio": 0.75,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05,
+        "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
+        "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      },
+      {
+        "asset": "LINK",
+        "name": "Citrus Agave Leveraged LINK Vault",
+        "symbol": "clvagLINK",
+        "type": "aave-v2-leveraged",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
+        "maxCollateralRatio": 0.3,
+        "targetCollateralRatio": 0.29,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05,
+        "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
+        "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      },
+      {
+        "asset": "GNO",
+        "name": "Citrus Agave Leveraged GNO Vault",
+        "symbol": "clvagGNO",
+        "type": "aave-v2-leveraged",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6810e776880C02933D47DB1b9fc05908e5386b96/logo.png",
+        "maxCollateralRatio": 0.6,
+        "targetCollateralRatio": 0.57,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05,
+        "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
+        "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      },
+      {
+        "asset": "WBTC",
+        "name": "Citrus Agave Leveraged WBTC Vault",
+        "symbol": "clvagWBTC",
+        "type": "aave-v2-leveraged",
+        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/ethereum/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599/logo.png",
+        "maxCollateralRatio": 0.7,
+        "targetCollateralRatio": 0.67,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05,
+        "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
+        "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      },
+      {
+        "asset": "WETH",
+        "name": "Citrus Agave Leveraged WETH Vault",
+        "symbol": "clvagWETH",
+        "type": "aave-v2-leveraged",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "maxCollateralRatio": 0.7,
+        "targetCollateralRatio": 0.67,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05,
+        "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
+        "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "erc4626Router": "0xD2eF537566f23c1E2eB007247161367443bB52E1",
+  "vault": {
+    "lens": "0x3eAFac473B80f6B209e5281843E9519423dF6773"
+  },
+  "vault.vaults": [
+    {
+      "address": "0xE88c748b684a1fE3948beA2c084B4c9F7938DE21",
+      "name": "Citrus Agave Leveraged WXDAI Vault",
+      "asset": {
+        "name": "Wrapped XDAI",
+        "symbol": "WXDAI",
+        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png"
+      },
+      "withdrawalFeePercentage": 0.1,
+      "harvestFeePercentage": 5
+    },
+    {
+      "address": "0x3bb8B770402805D16e1E4874d18f18F0843C7E40",
+      "name": "Citrus Agave Leveraged USDC Vault",
+      "asset": {
+        "name": "USD//C on xDai",
+        "symbol": "USDC",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+      },
+      "withdrawalFeePercentage": 0.1,
+      "harvestFeePercentage": 5
+    },
+    {
+      "address": "0x9E1FA4A90f61f8a5e6FA0E8F6Ed5C26119cAd5E4",
+      "name": "Citrus Agave Leveraged LINK Vault",
+      "asset": {
+        "name": "ChainLink Token on xDai",
+        "symbol": "LINK",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
+      },
+      "withdrawalFeePercentage": 0.1,
+      "harvestFeePercentage": 5
+    },
+    {
+      "address": "0x7885b6Dd2e585139a5ee8Ba5a07F0E4e293Ccfc1",
+      "name": "Citrus Agave Leveraged GNO Vault",
+      "asset": {
+        "name": "Gnosis Token on xDai",
+        "symbol": "GNO",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6810e776880C02933D47DB1b9fc05908e5386b96/logo.png"
+      },
+      "withdrawalFeePercentage": 0.1,
+      "harvestFeePercentage": 5
+    },
+    {
+      "address": "0xe424c7d61150065e5B0dD24DB142cF5d2CB0DF76",
+      "name": "Citrus Agave Leveraged WBTC Vault",
+      "asset": {
+        "name": "Wrapped BTC on xDai",
+        "symbol": "WBTC",
+        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/ethereum/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599/logo.png"
+      },
+      "withdrawalFeePercentage": 0.1,
+      "harvestFeePercentage": 5
+    },
+    {
+      "address": "0x885850e02f9036DC5e275Fa28a8337D6f0B88089",
+      "name": "Citrus Agave Leveraged WETH Vault",
+      "asset": {
+        "name": "Wrapped Ether on xDai",
+        "symbol": "WETH",
+        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+      },
+      "withdrawalFeePercentage": 0.1,
+      "harvestFeePercentage": 5
+    }
+  ]
+}

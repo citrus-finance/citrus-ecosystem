@@ -1,0 +1,26 @@
+{
+  "weth": "wxdai",
+  "tokens": {
+    "wxdai": "WETH",
+    "USDC": {
+      "name": "Mock USDC",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  "vault": {
+    "vaults": [
+      {
+        "asset": "wxdai",
+        "name": "Citrus WXDAI Vault",
+        "symbol": "cvWXDAI",
+        "type": "mock",
+        "iconUrl": "",
+        "maxCollateralRatio": 0.8,
+        "targetCollateralRatio": 0.75,
+        "withdrawalFee": 0.001,
+        "harvestFee": 0.05
+      }
+    ]
+  }
+}

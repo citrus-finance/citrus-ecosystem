@@ -1,0 +1,6 @@
+[submodule "contracts/citrus-vaults"]
+	path = contracts/citrus-vaults
+	url = git@github.com:citrus-finance/citrus-vaults.git
+[submodule "contracts/ERC4626-router"]
+	path = contracts/ERC4626-router
+	url = git@github.com:citrus-finance/ERC4626-router.git
