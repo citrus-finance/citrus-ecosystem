@@ -51,6 +51,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
         name: await view(assetAddress, 'IStrictERC20', 'name'),
         symbol: await view(assetAddress, 'IStrictERC20', 'symbol'),
         iconUrl: vault.iconUrl,
+        isWrappedNative: assetAddress.toLowerCase() === (await getTokenAddress(config.weth)).toLowerCase(),
       },
       withdrawalFeePercentage: vault.withdrawalFee * 100,
       harvestFeePercentage: vault.harvestFee * 100,

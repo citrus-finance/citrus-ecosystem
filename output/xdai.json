@@ -9,7 +9,8 @@
         "asset": {
           "name": "Wrapped XDAI",
           "symbol": "WXDAI",
-          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png"
+          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+          "isWrappedNative": true
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
@@ -20,7 +21,8 @@
         "asset": {
           "name": "USD//C on xDai",
           "symbol": "USDC",
-          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+          "isWrappedNative": false
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
@@ -31,7 +33,8 @@
         "asset": {
           "name": "ChainLink Token on xDai",
           "symbol": "LINK",
-          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
+          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
+          "isWrappedNative": false
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
@@ -42,7 +45,8 @@
         "asset": {
           "name": "Gnosis Token on xDai",
           "symbol": "GNO",
-          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6810e776880C02933D47DB1b9fc05908e5386b96/logo.png"
+          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6810e776880C02933D47DB1b9fc05908e5386b96/logo.png",
+          "isWrappedNative": false
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
@@ -53,7 +57,8 @@
         "asset": {
           "name": "Wrapped BTC on xDai",
           "symbol": "WBTC",
-          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/ethereum/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599/logo.png"
+          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/ethereum/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599/logo.png",
+          "isWrappedNative": false
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
@@ -64,7 +69,8 @@
         "asset": {
           "name": "Wrapped Ether on xDai",
           "symbol": "WETH",
-          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+          "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+          "isWrappedNative": false
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
