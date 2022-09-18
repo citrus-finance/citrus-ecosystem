@@ -1,7 +1,6 @@
 import { readFileSync } from 'fs'
 import path from 'path'
 
-import '@nomicfoundation/hardhat-toolbox'
 import findUp from 'find-up'
 import multimatch from 'multimatch'
 
@@ -17,7 +16,6 @@ import '@openzeppelin/hardhat-upgrades'
 import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
 import '@nomiclabs/hardhat-ethers'
-import '@nomiclabs/hardhat-etherscan'
 import 'hardhat-preprocessor'
 
 import { TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS } from 'hardhat/builtin-tasks/task-names'
@@ -29,12 +27,15 @@ task('checkUpgradabilityAll', 'Checks storage slot upgradability for all contrac
 task('verifyAllContracts', 'Verify all contracts').setAction(verifyAllContracts)
 
 const sourcePaths = [
-  'contracts/citrus-vaults',
-  '!contracts/citrus-vaults/lib/BoringSolidity/contracts/mocks',
-  'contracts/ERC4626-router',
-  '!contracts/ERC4626-router/src/test',
-  '!contracts/ERC4626-router/lib/solmate/src/test',
-  '!**/ds-test',
+  'contracts/citrus-vaults/**/*.sol',
+  '!contracts/citrus-vaults/lib/BoringSolidity/contracts/mocks/**/*.sol',
+  'contracts/ERC4626-router/**/*.sol',
+  '!contracts/ERC4626-router/src/test/**/*.sol',
+  '!contracts/ERC4626-router/lib/solmate/src/test/**/*.sol',
+  '!**/ds-test/**/*.sol',
+  '!**/forge-std/**/*.sol',
+  '!**/*.t.sol',
+  '!**/test/**/*.sol',
 ]
 
 subtask(TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS).setAction(async (_, __, runSuper) => {
@@ -42,9 +43,7 @@ subtask(TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS).setAction(async (_, __, runSuper
 
   return multimatch(
     paths,
-    sourcePaths.map((x) =>
-      x[0] === '!' ? `!${process.cwd()}/${x.slice(1)}/**/*.sol` : `${process.cwd()}/${x}/**/*.sol`
-    )
+    sourcePaths.map((x) => (x[0] === '!' ? `!${process.cwd()}/${x.slice(1)}` : `${process.cwd()}/${x}`))
   )
 })
 
@@ -107,7 +106,7 @@ const config: HardhatUserConfig = {
   },
   paths: {},
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: {},
   },
   // @ts-ignore
   preprocess: {

@@ -1,30 +1,16 @@
-import { getAllContractNames } from './deployment'
+import { TASK_ETHERSCAN_VERIFY, TASK_SOURCIFY } from 'hardhat-deploy'
+import { HardhatRuntimeEnvironment } from 'hardhat/types'
 
-async function verifyContract(deploymentName: string) {
-  const deployment = await hre.deployments.get(deploymentName)
+export async function verifyAllContracts(_taskArguments: string[], hre: HardhatRuntimeEnvironment) {
+  // @ts-ignore
+  const apiKey = hre.config.etherscan.apiKey[hre.network.name]
 
-  try {
-    await hre.run('verify:verify', {
-      address: deployment.address,
-      constructorArguments: deployment.args,
+  if (apiKey) {
+    await hre.run(TASK_ETHERSCAN_VERIFY, {
+      apiKey,
+      sleep: true,
     })
-  } catch (err) {
-    if (err instanceof Error && err.message.toLowerCase().includes('already verified')) {
-      console.log(err.message)
-      return
-    }
-
-    throw err
-  }
-}
-
-export async function verifyAllContracts(_taskArguments, hre) {
-  const deployments = await getAllContractNames(hre)
-
-  for (let i = 0; i < deployments.length; i++) {
-    const deploymentName = deployments[i]
-    console.log('verifiying', deploymentName)
-
-    await verifyContract(deploymentName)
+  } else {
+    await hre.run(TASK_SOURCIFY, {})
   }
 }

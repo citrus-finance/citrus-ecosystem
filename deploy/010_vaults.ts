@@ -44,7 +44,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
       }
     })()
 
-    writeOutput(['vault', 'vaults', i], {
+    writeOutput(`vault.vaults[${i}]`, {
       address: vaultDeployment.address,
       name: vault.name,
       asset: {

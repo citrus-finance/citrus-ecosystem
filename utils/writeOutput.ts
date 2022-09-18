@@ -1,9 +1,28 @@
 import fs from 'fs'
 
 import hardhat from 'hardhat'
-import _, { PropertyPath } from 'lodash'
+import _ from 'lodash'
 
-export default function writeOutput(path: PropertyPath, value: any) {
+interface Output {
+  erc4626Router: string
+  vault: {
+    lens: string
+    vaults: {
+      address: string
+      name: string
+      asset: {
+        name: string
+        symbol: string
+        iconUrl: string
+        isWrappedNative: boolean
+      }
+      withdrawalFeePercentage: number
+      harvestFeePercentage: number
+    }[]
+  }
+}
+
+export default function writeOutput<P extends string>(path: P, value: GetFieldType<Output, P>) {
   const p = getFilePath()
 
   const outputData = (() => {
@@ -26,3 +45,33 @@ function getFilePath(): string {
 
   return process.cwd() + `/output/${hardhat.network.name}.json`
 }
+
+type GetIndexedField<T, K> = K extends keyof T
+  ? T[K]
+  : K extends `${number}`
+  ? '0' extends keyof T
+    ? undefined
+    : number extends keyof T
+    ? T[number]
+    : undefined
+  : undefined
+
+type FieldWithPossiblyUndefined<T, Key> = GetFieldType<Exclude<T, undefined>, Key> | Extract<T, undefined>
+
+type IndexedFieldWithPossiblyUndefined<T, Key> = GetIndexedField<Exclude<T, undefined>, Key> | Extract<T, undefined>
+
+export type GetFieldType<T, P> = P extends `${infer Left}.${infer Right}`
+  ? Left extends keyof T
+    ? FieldWithPossiblyUndefined<T[Left], Right>
+    : Left extends `${infer FieldKey}[${infer IndexKey}]`
+    ? FieldKey extends keyof T
+      ? FieldWithPossiblyUndefined<IndexedFieldWithPossiblyUndefined<T[FieldKey], IndexKey>, Right>
+      : undefined
+    : undefined
+  : P extends keyof T
+  ? T[P]
+  : P extends `${infer FieldKey}[${infer IndexKey}]`
+  ? FieldKey extends keyof T
+    ? IndexedFieldWithPossiblyUndefined<T[FieldKey], IndexKey>
+    : undefined
+  : undefined
