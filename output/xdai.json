@@ -1,7 +1,7 @@
 {
   "erc4626Router": "0xd41aD5CC4496f3Aae5bB4dD0FCf23874f1b45466",
   "vault": {
-    "lens": "0x5E0A8670b3D4E55ECfB8601f020F6f53C5DcBdB6",
+    "lens": "0xd363b4057ead54Fd89796E178C944e5634E87686",
     "vaults": [
       {
         "address": "0x4f6F3aAd9A82Bed611D74b2856200F52103Be9FE",
