@@ -77,7 +77,7 @@
       }
     ],
     "harverters": {
-      "balancerManager": "0x386bc484112dC99668FbE2728E8f0c4A1647b465",
+      "balancerManager": "0x10115Ef77bcFD57649b1ECB8A574b56BCca8b843",
       "swapper": "0x386bc484112dC99668FbE2728E8f0c4A1647b465"
     }
   }

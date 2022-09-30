@@ -40,7 +40,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
   })
 
   writeOutput('vault.harverters', {
-    balancerManager: swapperDeployment.address,
+    balancerManager: balancerPoolManagerDeployment.address,
     swapper: swapperDeployment.address,
   })
 
