@@ -75,6 +75,10 @@
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
       }
-    ]
+    ],
+    "harverters": {
+      "balancerManager": "0x386bc484112dC99668FbE2728E8f0c4A1647b465",
+      "swapper": "0x386bc484112dC99668FbE2728E8f0c4A1647b465"
+    }
   }
 }

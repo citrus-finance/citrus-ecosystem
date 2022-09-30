@@ -9,6 +9,8 @@
     "WETH": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1"
   },
   "vault": {
+    "manager": "0x2314cfA28147Bf87b1BC3683AA568d534e0a4728",
+    "feeTaker": "0x77142aaDB8b3485F2f1417aA0f8551D18EF0E3fF",
     "vaults": [
       {
         "asset": "WXDAI",

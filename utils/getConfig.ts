@@ -40,6 +40,7 @@ interface Config {
   }
 }
 
+// TODO: check all addresses are checksummed
 export default function getConfig(): Config {
   if (hardhat.network.name === 'localhost' || hardhat.network.name === 'hardhat') {
     return require('../config/dev.json')

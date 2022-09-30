@@ -19,6 +19,10 @@ interface Output {
       withdrawalFeePercentage: number
       harvestFeePercentage: number
     }[]
+    harverters: {
+      balancerManager: string
+      swapper: string
+    }
   }
 }
 
