@@ -1,10 +1,10 @@
 {
   "erc4626Router": "0xd41aD5CC4496f3Aae5bB4dD0FCf23874f1b45466",
   "vault": {
-    "lens": "0x37391aDD23D934108F3677c337849519B14F9026",
+    "lens": "0x266067F920136839939776c132c386f97e491205",
     "vaults": [
       {
-        "address": "0x4f6F3aAd9A82Bed611D74b2856200F52103Be9FE",
+        "address": "0x2cd43101C7A0E5AC5F239b91fBd6dce141d55BD5",
         "name": "Citrus Agave Leveraged WXDAI Vault",
         "asset": {
           "name": "Wrapped XDAI",
@@ -16,7 +16,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x9Cf151A2e652769B31852033A9Ec3dfBB38b093b",
+        "address": "0xA3E8C4A0a6ED255eCDa5Fa45C8A8E8041d59d19f",
         "name": "Citrus Agave Leveraged USDC Vault",
         "asset": {
           "name": "USD//C on xDai",
@@ -28,7 +28,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0xf8226f00236751d8cA391A14b8e6029Ce2045C3e",
+        "address": "0x6Fb0231b24B9B15b604cCe8Dfb5CEc149933ea6A",
         "name": "Citrus Agave Leveraged LINK Vault",
         "asset": {
           "name": "ChainLink Token on xDai",
@@ -40,7 +40,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x680768E25cA904e408BC6eB81706cDAE82634ff9",
+        "address": "0x7AD3A7E4575059E3cda740768A8e2EB29D80EdcA",
         "name": "Citrus Agave Leveraged GNO Vault",
         "asset": {
           "name": "Gnosis Token on xDai",
@@ -52,7 +52,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x7aaA2aD92e3B3e93Db5cAaee2592e2460B35A6b9",
+        "address": "0x3b769Fc960Eea3131339e029DcE4D59F0FFB961C",
         "name": "Citrus Agave Leveraged WBTC Vault",
         "asset": {
           "name": "Wrapped BTC on xDai",
@@ -64,7 +64,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x0E4b5A87c5D16D8b5B7642e63a16828A47484D2D",
+        "address": "0x4C17FBdDFab7f44054e606547E71554C9C55A21B",
         "name": "Citrus Agave Leveraged WETH Vault",
         "asset": {
           "name": "Wrapped Ether on xDai",
@@ -77,8 +77,8 @@
       }
     ],
     "harverters": {
-      "balancerManager": "0x10115Ef77bcFD57649b1ECB8A574b56BCca8b843",
-      "swapper": "0x386bc484112dC99668FbE2728E8f0c4A1647b465"
+      "balancerManager": "0x3A32dFe680f5177d1b88061A566dA858a847C78A",
+      "swapper": "0xC877F9751d9Ef15c5784E22dAcfBC64F59d164cf"
     }
   }
 }

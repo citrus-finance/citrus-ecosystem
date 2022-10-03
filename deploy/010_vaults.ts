@@ -6,6 +6,7 @@ import getTokenAddress from '../utils/getTokenAddress'
 import writeOutput from '../utils/writeOutput'
 import view from '../utils/view'
 import execute from '../utils/execute'
+import { numberToMantissa } from '../utils/number'
 
 const deployVaults: DeployFunction = async function deployVaults({}: HardhatRuntimeEnvironment) {
   const config = getConfig()
@@ -39,10 +40,12 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
     skipUpgradeSafety: true,
   })
 
-  writeOutput('vault.harverters', {
+  const harverters = {
     balancerManager: balancerPoolManagerDeployment.address,
     swapper: swapperDeployment.address,
-  })
+  } as const
+
+  writeOutput('vault.harverters', harverters)
 
   // Deploy Vaults
   for (let i = 0; i < config.vault.vaults.length; i++) {
@@ -77,6 +80,81 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
 
       if (actualManager !== expectedManager) {
         await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setManager', [expectedManager])
+      }
+
+      const actualWithdrawalFee = await view(vaultDeployment.address, 'LeveragedLendingVault', 'withdrawalFee')
+      const expectedWithdrawalFee = numberToMantissa(vault.withdrawalFee)
+
+      if (!actualWithdrawalFee.eq(expectedWithdrawalFee)) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setWithdrawalFee', [expectedWithdrawalFee])
+      }
+
+      const actualHarvestFee = await view(vaultDeployment.address, 'LeveragedLendingVault', 'harvestFee')
+      const expectedHarvestFee = numberToMantissa(vault.harvestFee)
+
+      if (!actualHarvestFee.eq(expectedHarvestFee)) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setHarvestFee', [expectedHarvestFee])
+      }
+    }
+
+    const isHarvestable = !['mock'].includes(vault.type)
+    if (isHarvestable) {
+      const actualHarvesters = (
+        await view(vaultDeployment.address, 'LeveragedLendingVault', 'allHarvesters').then((arr: string[]) =>
+          Promise.all(
+            arr.map(async (x) => [
+              x,
+              await view(vaultDeployment.address, 'LeveragedLendingVault', 'allowedHarvesters', [x]),
+            ])
+          )
+        )
+      )
+        .filter((x) => x[1])
+        .map((x) => x[0])
+      const expectedHarvesters = [harverters.balancerManager, harverters.swapper]
+
+      const harvertersToAdd = expectedHarvesters.filter((x) => !actualHarvesters.includes(x))
+      const harvertersToRemove = actualHarvesters.filter((x) => !expectedHarvesters.includes(x))
+
+      await Promise.all(
+        harvertersToAdd.map(async (harverter) => {
+          await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, true])
+        })
+      )
+
+      await Promise.all(
+        harvertersToRemove.map(async (harverter) => {
+          await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, false])
+        })
+      )
+    }
+
+    const isLeveraged = ['aave-v2-leveraged'].includes(vault.type)
+    if (isLeveraged) {
+      const actualMaxCollateralRatio = await view(
+        vaultDeployment.address,
+        'LeveragedLendingVault',
+        'maxCollateralRatio'
+      )
+      const expectedMaxCollateralRatio = numberToMantissa(vault.maxCollateralRatio)
+
+      if (!actualMaxCollateralRatio.eq(expectedMaxCollateralRatio)) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setMaxCollateralRatio', [
+          expectedMaxCollateralRatio,
+        ])
+      }
+
+      const actualTargetCollateralRatio = await view(
+        vaultDeployment.address,
+        'LeveragedLendingVault',
+        'targetCollateralRatio'
+      )
+      const expectedTargetCollateralRatio = numberToMantissa(vault.targetCollateralRatio)
+
+      if (!actualTargetCollateralRatio.eq(expectedTargetCollateralRatio)) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setTargetCollateralRatio', [
+          expectedTargetCollateralRatio,
+        ])
       }
     }
 
