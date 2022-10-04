@@ -127,6 +127,13 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
           await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, false])
         })
       )
+
+      const actualFeeTaker = await view(vaultDeployment.address, 'LeveragedLendingVault', 'feeTaker')
+      const expectedFeeTaker = config.vault.feeTaker
+
+      if (actualFeeTaker !== expectedFeeTaker) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setFeeTaker', [expectedFeeTaker])
+      }
     }
 
     const isLeveraged = ['aave-v2-leveraged'].includes(vault.type)
