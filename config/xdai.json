@@ -56,7 +56,7 @@
         "name": "Citrus Agave Leveraged GNO Vault",
         "symbol": "clvagGNO",
         "type": "aave-v2-leveraged",
-        "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6810e776880C02933D47DB1b9fc05908e5386b96/logo.png",
+        "iconUrl": "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/icon/gno.svg",
         "maxCollateralRatio": 0.6,
         "targetCollateralRatio": 0.57,
         "withdrawalFee": 0.001,
