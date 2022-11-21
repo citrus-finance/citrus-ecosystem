@@ -4,8 +4,8 @@
     "lens": "0x266067F920136839939776c132c386f97e491205",
     "vaults": [
       {
-        "address": "0x2cd43101C7A0E5AC5F239b91fBd6dce141d55BD5",
-        "name": "Citrus Agave Leveraged WXDAI Vault",
+        "address": "0x656db2eA5fae970de249820aF28BbA4a41E1DD23",
+        "name": "Leveraged WXDAI on Agave",
         "asset": {
           "name": "Wrapped XDAI",
           "symbol": "WXDAI",
@@ -16,8 +16,8 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0xA3E8C4A0a6ED255eCDa5Fa45C8A8E8041d59d19f",
-        "name": "Citrus Agave Leveraged USDC Vault",
+        "address": "0xDc78924A6379A2817A611cEED6Db686f7E8cBaD9",
+        "name": "Leveraged USDC on Agave",
         "asset": {
           "name": "USD//C on xDai",
           "symbol": "USDC",
@@ -28,8 +28,8 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x6Fb0231b24B9B15b604cCe8Dfb5CEc149933ea6A",
-        "name": "Citrus Agave Leveraged LINK Vault",
+        "address": "0x30b939757AdBE723397A3f4b6541f99bBc4Ac266",
+        "name": "Leveraged LINK on Agave",
         "asset": {
           "name": "ChainLink Token on xDai",
           "symbol": "LINK",
@@ -40,8 +40,8 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x7AD3A7E4575059E3cda740768A8e2EB29D80EdcA",
-        "name": "Citrus Agave Leveraged GNO Vault",
+        "address": "0x6AF1C43a8497acfbE734fE763D06A7Bb51D2DdF6",
+        "name": "Leveraged GNO on Agave",
         "asset": {
           "name": "Gnosis Token on xDai",
           "symbol": "GNO",
@@ -52,8 +52,8 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x3b769Fc960Eea3131339e029DcE4D59F0FFB961C",
-        "name": "Citrus Agave Leveraged WBTC Vault",
+        "address": "0x26b6Ba2a6DB3629e69941FB3E0aa8c125e44B6Cd",
+        "name": "Leveraged WBTC on Agave",
         "asset": {
           "name": "Wrapped BTC on xDai",
           "symbol": "WBTC",
@@ -64,8 +64,8 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x4C17FBdDFab7f44054e606547E71554C9C55A21B",
-        "name": "Citrus Agave Leveraged WETH Vault",
+        "address": "0x9B8d1b11feCBD7F92787E57539e0526A7250e0f0",
+        "name": "Leveraged WETH on Agave",
         "asset": {
           "name": "Wrapped Ether on xDai",
           "symbol": "WETH",

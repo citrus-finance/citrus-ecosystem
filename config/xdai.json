@@ -14,7 +14,7 @@
     "vaults": [
       {
         "asset": "WXDAI",
-        "name": "Citrus Agave Leveraged WXDAI Vault",
+        "name": "Leveraged WXDAI on Agave",
         "symbol": "clvagWXDAI",
         "type": "aave-v2-leveraged",
         "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
@@ -27,7 +27,7 @@
       },
       {
         "asset": "USDC",
-        "name": "Citrus Agave Leveraged USDC Vault",
+        "name": "Leveraged USDC on Agave",
         "symbol": "clvagUSDC",
         "type": "aave-v2-leveraged",
         "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
@@ -40,7 +40,7 @@
       },
       {
         "asset": "LINK",
-        "name": "Citrus Agave Leveraged LINK Vault",
+        "name": "Leveraged LINK on Agave",
         "symbol": "clvagLINK",
         "type": "aave-v2-leveraged",
         "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
@@ -53,7 +53,7 @@
       },
       {
         "asset": "GNO",
-        "name": "Citrus Agave Leveraged GNO Vault",
+        "name": "Leveraged GNO on Agave",
         "symbol": "clvagGNO",
         "type": "aave-v2-leveraged",
         "iconUrl": "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/icon/gno.svg",
@@ -66,7 +66,7 @@
       },
       {
         "asset": "WBTC",
-        "name": "Citrus Agave Leveraged WBTC Vault",
+        "name": "Leveraged WBTC on Agave",
         "symbol": "clvagWBTC",
         "type": "aave-v2-leveraged",
         "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/ethereum/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599/logo.png",
@@ -79,7 +79,7 @@
       },
       {
         "asset": "WETH",
-        "name": "Citrus Agave Leveraged WETH Vault",
+        "name": "Leveraged WETH on Agave",
         "symbol": "clvagWETH",
         "type": "aave-v2-leveraged",
         "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",

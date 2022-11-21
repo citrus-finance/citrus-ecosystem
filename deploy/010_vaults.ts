@@ -57,7 +57,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
       switch (vault.type) {
         case 'mock': {
           return deploy(vault.name.replaceAll(' ', ''), 'MockERC4626', {
-            args: [assetAddress, vault.name, vault.symbol],
+            args: [assetAddress, `Citrus ${vault.name} Vault`, vault.symbol],
             skipIfAlreadyDeployed: true,
             skipUpgradeSafety: true,
           })
@@ -65,7 +65,13 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
 
         case 'aave-v2-leveraged': {
           return deploy(vault.name.replaceAll(' ', ''), 'Aave2LeveragedVault', {
-            args: [assetAddress, vault.name, vault.symbol, vault.lendingPool, vault.incentivesController],
+            args: [
+              assetAddress,
+              `Citrus ${vault.name} Vault`,
+              vault.symbol,
+              vault.lendingPool,
+              vault.incentivesController,
+            ],
             skipIfAlreadyDeployed: true,
             skipUpgradeSafety: true,
           })
