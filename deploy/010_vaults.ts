@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 import { DeployFunction } from 'hardhat-deploy/types'
-import getConfig from '../utils/getConfig'
+import getConfig, { Aave2LeveragedVault } from '../utils/getConfig'
 import deploy from '../utils/deploy'
 import getTokenAddress from '../utils/getTokenAddress'
 import writeOutput from '../utils/writeOutput'
@@ -40,9 +40,18 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
     skipUpgradeSafety: true,
   })
 
+  const saddlePoolManagerDeployment = await deploy('SaddlePoolManager', 'SaddlePoolManager', {
+    args: [],
+    // FIXME: remove once skipIfSameBytecode is fixed
+    skipIfAlreadyDeployed: true,
+    skipIfSameBytecode: true,
+    skipUpgradeSafety: true,
+  })
+
   const harverters = {
     balancerManager: balancerPoolManagerDeployment.address,
     swapper: swapperDeployment.address,
+    saddleManager: saddlePoolManagerDeployment.address,
   } as const
 
   writeOutput('vault.harverters', harverters)
@@ -149,7 +158,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
         'LeveragedLendingVault',
         'maxCollateralRatio'
       )
-      const expectedMaxCollateralRatio = numberToMantissa(vault.maxCollateralRatio)
+      const expectedMaxCollateralRatio = numberToMantissa((vault as Aave2LeveragedVault).maxCollateralRatio)
 
       if (!actualMaxCollateralRatio.eq(expectedMaxCollateralRatio)) {
         await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setMaxCollateralRatio', [
@@ -162,7 +171,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
         'LeveragedLendingVault',
         'targetCollateralRatio'
       )
-      const expectedTargetCollateralRatio = numberToMantissa(vault.targetCollateralRatio)
+      const expectedTargetCollateralRatio = numberToMantissa((vault as Aave2LeveragedVault).targetCollateralRatio)
 
       if (!actualTargetCollateralRatio.eq(expectedTargetCollateralRatio)) {
         await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setTargetCollateralRatio', [
