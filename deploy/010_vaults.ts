@@ -85,6 +85,14 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
             skipUpgradeSafety: true,
           })
         }
+
+        case 'hop-vault': {
+          return deploy(vault.name.replaceAll(' ', ''), 'HopVault', {
+            args: [assetAddress, vault.name, vault.symbol, vault.stakingRewards],
+            skipIfAlreadyDeployed: true,
+            skipUpgradeSafety: true,
+          })
+        }
       }
     })()
 
@@ -115,39 +123,36 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
     const isHarvestable = !['mock'].includes(vault.type)
     if (isHarvestable) {
       const actualHarvesters = (
-        await view(vaultDeployment.address, 'LeveragedLendingVault', 'allHarvesters').then((arr: string[]) =>
-          Promise.all(
-            arr.map(async (x) => [
-              x,
-              await view(vaultDeployment.address, 'LeveragedLendingVault', 'allowedHarvesters', [x]),
-            ])
-          )
+        await view(vaultDeployment.address, 'Vault', 'allHarvesters').then((arr: string[]) =>
+          Promise.all(arr.map(async (x) => [x, await view(vaultDeployment.address, 'Vault', 'allowedHarvesters', [x])]))
         )
       )
         .filter((x) => x[1])
         .map((x) => x[0])
-      const expectedHarvesters = [harverters.balancerManager, harverters.swapper]
+      const expectedHarvesters = [harverters.swapper].concat(
+        vault.type === 'aave-v2-leveraged' ? [harverters.balancerManager] : [harverters.saddleManager]
+      )
 
       const harvertersToAdd = expectedHarvesters.filter((x) => !actualHarvesters.includes(x))
       const harvertersToRemove = actualHarvesters.filter((x) => !expectedHarvesters.includes(x))
 
       await Promise.all(
         harvertersToAdd.map(async (harverter) => {
-          await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, true])
+          await execute(vaultDeployment.address, 'Vault', 'allowHarvester', [harverter, true])
         })
       )
 
       await Promise.all(
         harvertersToRemove.map(async (harverter) => {
-          await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, false])
+          await execute(vaultDeployment.address, 'Vault', 'allowHarvester', [harverter, false])
         })
       )
 
-      const actualFeeTaker = await view(vaultDeployment.address, 'LeveragedLendingVault', 'feeTaker')
+      const actualFeeTaker = await view(vaultDeployment.address, 'Vault', 'feeTaker')
       const expectedFeeTaker = config.vault.feeTaker
 
       if (actualFeeTaker !== expectedFeeTaker) {
-        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'setFeeTaker', [expectedFeeTaker])
+        await execute(vaultDeployment.address, 'Vault', 'setFeeTaker', [expectedFeeTaker])
       }
     }
 
