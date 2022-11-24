@@ -5,10 +5,13 @@
     "USDC": "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
     "USDT": "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
     "LINK": "0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2",
-    "MATIC": "0x7122d7661c4564b7C6Cd4878B06766489a6028A2",
     "GNO": "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
     "WBTC": "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
-    "WETH": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1"
+    "WETH": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+    "HOP-LP-ETH": "0xb9cca4Ed3f082a459c0851058D9FBA0B78dD6C7d",
+    "HOP-LP-USDC": "0x9D373d22FD091d7f9A6649EB067557cc12Fb1A0A",
+    "HOP-LP-USDT": "0x5b10222f2Ada260AAf6C6fC274bd5810AF9d33c0",
+    "HOP-LP-DAI": "0x5300648b1cFaa951bbC1d56a4457083D92CFa33F"
   },
   "vault": {
     "manager": "0x2314cfA28147Bf87b1BC3683AA568d534e0a4728",
@@ -93,49 +96,39 @@
         "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
       },
       {
-        "asset": "WETH",
-        "name": "Citrus Hop WETH Vault",
-        "symbol": "cVaultWETH",
+        "asset": "HOP-LP-ETH",
+        "name": "LP ETH on Hop",
+        "symbol": "cvltWETH",
         "type": "hop-vault",
         "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "withdrawalFee": 0.001,
         "harvestFee": 0.05,
-        "stakingRewards": "0x12a3a66720dD925fa93f7C895bC20Ca9560AdFe7"
+        "stakingRewards": "0xC61bA16e864eFbd06a9fe30Aab39D18B8F63710a"
       },
       {
-        "asset": "USDC",
-        "name": "Citrus Hop USDC Vault",
-        "symbol": "cVaultUSDC",
+        "asset": "HOP-LP-USDC",
+        "name": "LP USDC on Hop",
+        "symbol": "cvltUSDC",
         "type": "hop-vault",
         "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
         "withdrawalFee": 0.001,
         "harvestFee": 0.05,
-        "stakingRewards": "0x12a3a66720dD925fa93f7C895bC20Ca9560AdFe7"
+        "stakingRewards": "0x5D13179c5fa40b87D53Ff67ca26245D3D5B2F872"
       },
       {
-        "asset": "USDT",
-        "name": "Citrus Hop USDT Vault",
-        "symbol": "cVaultUSDT",
+        "asset": "HOP-LP-USDT",
+        "name": "LP USDT on Hop",
+        "symbol": "cvlttUSDT",
         "type": "hop-vault",
         "iconUrl": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "withdrawalFee": 0.001,
         "harvestFee": 0.05,
-        "stakingRewards": "0x12a3a66720dD925fa93f7C895bC20Ca9560AdFe7"
+        "stakingRewards": "0x2C2Ab81Cf235e86374468b387e241DF22459A265"
       },
       {
-        "asset": "MATIC",
-        "name": "Citrus Hop MATIC Vault",
-        "symbol": "cVaultMATIC",
-        "type": "hop-vault",
-        "iconUrl": "https://etherscan.io/token/images/matictoken_28.png",
-        "withdrawalFee": 0.001,
-        "harvestFee": 0.05,
-        "stakingRewards": "0x12a3a66720dD925fa93f7C895bC20Ca9560AdFe7"
-      },
-      {
-        "asset": "WXDAI",
-        "name": "Citrus Hop WXDAI Vault",
-        "symbol": "cVaultWXDAI",
+        "asset": "HOP-LP-DAI",
+        "name": "LP DAI on Hop",
+        "symbol": "cvltWXDAI",
         "type": "hop-vault",
         "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
         "withdrawalFee": 0.001,
