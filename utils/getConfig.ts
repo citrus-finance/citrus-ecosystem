@@ -5,8 +5,6 @@ interface BaseVault {
   name: string
   symbol: string
   iconUrl: string
-  maxCollateralRatio: number
-  targetCollateralRatio: number
   withdrawalFee: number
   harvestFee: number
 }
@@ -15,10 +13,17 @@ interface MockVault extends BaseVault {
   type: 'mock'
 }
 
-interface Aave2LeveragedVault extends BaseVault {
+export interface Aave2LeveragedVault extends BaseVault {
   type: 'aave-v2-leveraged'
   lendingPool: string
   incentivesController: string
+  maxCollateralRatio: number
+  targetCollateralRatio: number
+}
+
+export interface HopVault extends BaseVault {
+  type: 'hop-vault'
+  stakingRewards: string
 }
 
 interface Config {
@@ -36,7 +41,7 @@ interface Config {
   vault: {
     manager: string
     feeTaker: string
-    vaults: (Aave2LeveragedVault | MockVault)[]
+    vaults: (Aave2LeveragedVault | MockVault | HopVault)[]
   }
 }
 
