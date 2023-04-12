@@ -122,17 +122,13 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
       const harvertersToAdd = expectedHarvesters.filter((x) => !actualHarvesters.includes(x))
       const harvertersToRemove = actualHarvesters.filter((x) => !expectedHarvesters.includes(x))
 
-      await Promise.all(
-        harvertersToAdd.map(async (harverter) => {
-          await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, true])
-        })
-      )
+      for (let harverter of harvertersToAdd) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, true])
+      }
 
-      await Promise.all(
-        harvertersToRemove.map(async (harverter) => {
-          await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, false])
-        })
-      )
+      for (let harverter of harvertersToRemove) {
+        await execute(vaultDeployment.address, 'LeveragedLendingVault', 'allowHarvester', [harverter, false])
+      }
 
       const actualFeeTaker = await view(vaultDeployment.address, 'LeveragedLendingVault', 'feeTaker')
       const expectedFeeTaker = config.vault.feeTaker
@@ -169,6 +165,8 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
           expectedTargetCollateralRatio,
         ])
       }
+
+      // await execute(vaultDeployment.address, 'LeveragedLendingVault', 'rebalance', [])
     }
 
     writeOutput(`vault.vaults[${i}]`, {

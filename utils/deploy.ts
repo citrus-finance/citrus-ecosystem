@@ -40,7 +40,7 @@ export default async function deploy(
   const result = await deploy(name, {
     contract: contractName,
     from: deployer,
-    waitConfirmations: isLocalhost ? 0 : 2,
+    waitConfirmations: isLocalhost ? 0 : 1,
     log: true,
     args: options.args,
     skipIfAlreadyDeployed: options.skipIfAlreadyDeployed,

@@ -37,7 +37,7 @@ export default async function execute(
     console.log(`running ${contractName}#${methodName}`)
     const tx = await contract[methodName](...args)
     if (!isLocalhost) {
-      await tx.wait(2)
+      await tx.wait(1)
     }
     return
   }
