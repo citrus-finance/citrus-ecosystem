@@ -16,7 +16,6 @@ import '@openzeppelin/hardhat-upgrades'
 import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
 import '@nomiclabs/hardhat-ethers'
-import '@xyrusworx/hardhat-solidity-json'
 
 import {
   TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS,

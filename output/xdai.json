@@ -1,14 +1,14 @@
 {
-  "erc4626Router": "0x04fF453014fAB7BE43533E96F62568B936dfF5CE",
+  "erc4626Router": "0x3A329722Aae3B9DAB6CAb61597FdDFbF6297F29B",
   "vault": {
-    "lens": "0xE43dA332138F0f5d2738aA4B353923CE29c629Af",
+    "lens": "0xecbc49c06180f28d355052e686320424ad482581",
     "harverters": {
-      "balancerManager": "0xCA245adBF911c3833BB7df7029c52081F6bbF669",
-      "swapper": "0x34aA616ca324e129E3Ec9a2FDD65D4bD62A441B7"
+      "balancerManager": "0xAbAd450fAfE0379D3D2a24394Fe36123693d23cB",
+      "swapper": "0x1c251F25ACE0D2f3Fe4E877fbDEA1Ee9b7A40315"
     },
     "vaults": [
       {
-        "address": "0xcf7c2a6a2F2dEbdEd65AB07DbAC109126b4d522e",
+        "address": "0xD569FbB5248C88BdB71a52017160Cb8A0868f296",
         "name": "Leveraged WXDAI on Agave",
         "asset": {
           "name": "Wrapped XDAI",
@@ -20,7 +20,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0xE58C7A406C9307AAc53Fc0f6483e9f817A60add1",
+        "address": "0xe8c5bA96eBdfE6b83BAf6c170b9882Ef35954923",
         "name": "Leveraged USDC on Agave",
         "asset": {
           "name": "USD//C on xDai",
@@ -32,7 +32,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x3eE4e8Aa7a720901F8c3bEe0A578aAc8E39789E8",
+        "address": "0x264F4D5556E7bC67e7F0a95E7f8Bb99184Cf7d73",
         "name": "Leveraged GNO on Agave",
         "asset": {
           "name": "Gnosis Token on xDai",
@@ -44,7 +44,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x3FcA6f9D82e33753807Bb61bb95cA88EEC640Cd0",
+        "address": "0x78797a29176ef4c0175125DFb64B3361E92BCAF2",
         "name": "Leveraged WBTC on Agave",
         "asset": {
           "name": "Wrapped BTC on xDai",
@@ -56,7 +56,7 @@
         "harvestFeePercentage": 5
       },
       {
-        "address": "0x7f0D713E897d9290434C677c039C9dF0F187FA66",
+        "address": "0xB68a956254A27DAAD38A928808e3e526C157827E",
         "name": "Leveraged WETH on Agave",
         "asset": {
           "name": "Wrapped Ether on xDai",
