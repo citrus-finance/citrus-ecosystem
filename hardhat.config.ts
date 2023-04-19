@@ -5,7 +5,7 @@ import findUp from 'find-up'
 import multimatch from 'multimatch'
 
 import { task, subtask } from 'hardhat/config'
-import { HardhatRuntimeEnvironment, HardhatUserConfig } from 'hardhat/types'
+import { HardhatUserConfig } from 'hardhat/types'
 
 import { verifyAllContracts } from './utils/verify'
 import { assertStorageLayoutChangeSafeForAll } from './utils/storageLayout'
@@ -16,9 +16,12 @@ import '@openzeppelin/hardhat-upgrades'
 import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
 import '@nomiclabs/hardhat-ethers'
-import 'hardhat-preprocessor'
+import '@xyrusworx/hardhat-solidity-json'
 
-import { TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS } from 'hardhat/builtin-tasks/task-names'
+import {
+  TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS,
+  TASK_COMPILE_SOLIDITY_READ_FILE,
+} from 'hardhat/builtin-tasks/task-names'
 
 task('checkUpgradabilityAll', 'Checks storage slot upgradability for all contracts').setAction(
   assertStorageLayoutChangeSafeForAll
@@ -46,6 +49,27 @@ subtask(TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS).setAction(async (_, __, runSuper
     sourcePaths.map((x) => (x[0] === '!' ? `!${process.cwd()}/${x.slice(1)}` : `${process.cwd()}/${x}`))
   )
 })
+
+subtask(
+  TASK_COMPILE_SOLIDITY_READ_FILE,
+  async ({ absolutePath }: { absolutePath: string }, hre, runSuper): Promise<string> => {
+    let content = await runSuper({ absolutePath })
+
+    return content
+      .split(/\r?\n/)
+      .map((line: string) => {
+        if (line.match(/^\s*import /i)) {
+          getRemappings(absolutePath).forEach(([find, replace]) => {
+            if (line.match(find)) {
+              line = line.replace(find, replace)
+            }
+          })
+        }
+        return line
+      })
+      .join('\n')
+  }
+)
 
 function getRemappings(filePath: string): string[][] {
   const remappingsPath = findUp.sync('remappings.txt', {
@@ -105,24 +129,6 @@ const config: HardhatUserConfig = {
     },
   },
   paths: {},
-  etherscan: {
-    apiKey: {},
-  },
-  // @ts-ignore
-  preprocess: {
-    eachLine: (hre: HardhatRuntimeEnvironment) => ({
-      transform: (line: string, sourceInfo: { absolutePath: string }) => {
-        if (line.match(/^\s*import /i)) {
-          getRemappings(sourceInfo.absolutePath).forEach(([find, replace]) => {
-            if (line.match(find)) {
-              line = line.replace(find, replace)
-            }
-          })
-        }
-        return line
-      },
-    }),
-  },
 }
 
 export default config
