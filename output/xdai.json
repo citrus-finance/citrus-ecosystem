@@ -1,5 +1,5 @@
 {
-  "erc4626Router": "0x3A329722Aae3B9DAB6CAb61597FdDFbF6297F29B",
+  "erc4626Router": "0x240930F183D8A3c5845Fa49066b36df41cE680c2",
   "vault": {
     "lens": "0xecbc49c06180f28d355052e686320424ad482581",
     "harverters": {
