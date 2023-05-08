@@ -34,6 +34,7 @@ const sourcePaths = [
   'contracts/ERC4626-router/**/*.sol',
   '!contracts/ERC4626-router/src/test/**/*.sol',
   '!contracts/ERC4626-router/lib/solmate/src/test/**/*.sol',
+  'contracts/rari-fuse/src/**/*.sol',
   '!**/ds-test/**/*.sol',
   '!**/forge-std/**/*.sol',
   '!**/*.t.sol',
@@ -59,7 +60,7 @@ subtask(
       .map((line: string) => {
         if (line.match(/^\s*import /i)) {
           getRemappings(absolutePath).forEach(([find, replace]) => {
-            if (line.match(find)) {
+            if (!replace.includes('node_modules') && line.match(find)) {
               line = line.replace(find, replace)
             }
           })
@@ -91,6 +92,24 @@ function getRemappings(filePath: string): string[][] {
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
+      {
+        version: '0.5.17',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: '0.6.12',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
       {
         version: '0.8.15',
         settings: {

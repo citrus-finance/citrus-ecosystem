@@ -8,8 +8,11 @@
   "license": "MIT",
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "@openzeppelin/contracts-upgradeable": "3.4.2",
     "@openzeppelin/hardhat-upgrades": "^1.20.0",
     "@openzeppelin/upgrades-core": "^1.18.0",
+    "@uniswap/v3-core": "1.0.1",
+    "@uniswap/v3-periphery": "1.4.1",
     "dotenv": "^16.0.2",
     "ethers": "^5.7.0",
     "find-up": "^5.0.0",

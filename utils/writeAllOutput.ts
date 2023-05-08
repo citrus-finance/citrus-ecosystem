@@ -1,33 +1,17 @@
 import fs from 'fs'
 
-import hardhat from 'hardhat'
 import _ from 'lodash'
 
 interface Output {
-  erc4626Router: string
-  vault: {
-    lens: string
-    vaults: {
-      address: string
-      name: string
-      asset: {
-        name: string
-        symbol: string
-        iconUrl: string
-        isWrappedNative: boolean
-      }
-      withdrawalFeePercentage: number
-      harvestFeePercentage: number
-    }[]
-    harverters: {
-      balancerManager: string
-      swapper: string
-    }
-  }
+  timelock: string
 }
 
-export default function writeOutput<P extends string>(path: P, value: GetFieldType<Output, P>) {
-  const p = getFilePath()
+export default function writeAllOutput<P extends string>(
+  path: P,
+  value: GetFieldType<Output, P>,
+  allowOverwrite = false
+) {
+  const p = '/output/all.json'
 
   const outputData = (() => {
     try {
@@ -37,17 +21,13 @@ export default function writeOutput<P extends string>(path: P, value: GetFieldTy
     }
   })()
 
+  if (!allowOverwrite && _.get(outputData, path) != undefined && _.get(outputData, path) !== value) {
+    throw new Error(``)
+  }
+
   _.set(outputData, path, value)
 
   fs.writeFileSync(p, JSON.stringify(outputData, null, 2), 'utf-8')
-}
-
-function getFilePath(): string {
-  if (hardhat.network.name === 'localhost' || hardhat.network.name === 'hardhat') {
-    return process.cwd() + '/output/dev.json'
-  }
-
-  return process.cwd() + `/output/${hardhat.network.name}.json`
 }
 
 type GetIndexedField<T, K> = K extends keyof T

@@ -11,6 +11,7 @@ export default async function deploy(
     skipUpgradeSafety?: boolean
     skipIfSameBytecode?: boolean
     skipIfAlreadyDeployed?: boolean
+    deterministicDeployment?: string | boolean | undefined
   }
 ): Promise<DeployResult> {
   const { deploy } = deployments
@@ -27,7 +28,7 @@ export default async function deploy(
       const artifact = await deployments.getArtifact(contractName)
 
       if (deployedContract.bytecode === artifact.bytecode) {
-        console.log(`Reusing "${name}" at ${deployedContract.address}`)
+        console.log(`reusing "${name}" at ${deployedContract.address}`)
 
         return {
           ...deployedContract,
@@ -44,6 +45,7 @@ export default async function deploy(
     log: true,
     args: options.args,
     skipIfAlreadyDeployed: options.skipIfAlreadyDeployed,
+    deterministicDeployment: options.deterministicDeployment,
   })
 
   return result

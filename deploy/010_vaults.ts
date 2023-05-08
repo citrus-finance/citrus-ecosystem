@@ -3,7 +3,7 @@ import { DeployFunction } from 'hardhat-deploy/types'
 import getConfig from '../utils/getConfig'
 import deploy from '../utils/deploy'
 import getTokenAddress from '../utils/getTokenAddress'
-import writeOutput from '../utils/writeOutput'
+import writeChainOutput from '../utils/writeChainOutput'
 import view from '../utils/view'
 import execute from '../utils/execute'
 import { numberToMantissa } from '../utils/number'
@@ -20,7 +20,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
     skipUpgradeSafety: true,
   })
 
-  writeOutput('vault.lens', lensDeployment.address)
+  writeChainOutput('vault.lens', lensDeployment.address)
 
   // Deploy Harvesters
 
@@ -45,7 +45,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
     swapper: swapperDeployment.address,
   } as const
 
-  writeOutput('vault.harverters', harverters)
+  writeChainOutput('vault.harverters', harverters)
 
   // Deploy Vaults
   for (let i = 0; i < config.vault.vaults.length; i++) {
@@ -169,7 +169,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
       // await execute(vaultDeployment.address, 'LeveragedLendingVault', 'rebalance', [])
     }
 
-    writeOutput(`vault.vaults[${i}]`, {
+    writeChainOutput(`vault.vaults[${i}]`, {
       address: vaultDeployment.address,
       name: vault.name,
       asset: {
