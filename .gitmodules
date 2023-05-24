@@ -7,3 +7,6 @@
 [submodule "contracts/rari-fuse"]
 	path = contracts/rari-fuse
 	url = git@github.com:citrus-finance/rari-fuse.git
+[submodule "contracts/citrus-oracle"]
+	path = contracts/citrus-oracle
+	url = git@github.com:citrus-finance/citrus-oracle.git

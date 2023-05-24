@@ -1,0 +1,455 @@
+{
+  "address": "0x745D5C694695e977295040B239C9E316eF266B37",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_baseCurrency",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_defaultOracle",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oldAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "NewAdmin",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oldOracle",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newOracle",
+          "type": "address"
+        }
+      ],
+      "name": "NewDefaultOracle",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oldGuardian",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newGuardian",
+          "type": "address"
+        }
+      ],
+      "name": "NewGuardian",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "underlying",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oldOracle",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newOracle",
+          "type": "address"
+        }
+      ],
+      "name": "NewOracle",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "underlyings",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_oracles",
+          "type": "address[]"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "baseCurrency",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "changeAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newGuardian",
+          "type": "address"
+        }
+      ],
+      "name": "changeGuardian",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "underlyings",
+          "type": "address[]"
+        }
+      ],
+      "name": "clear",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "defaultOracle",
+      "outputs": [
+        {
+          "internalType": "contract BasePriceOracle",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "cToken",
+          "type": "address"
+        }
+      ],
+      "name": "getUnderlyingPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "guardian",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "oracles",
+      "outputs": [
+        {
+          "internalType": "contract PriceOracle",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "underlying",
+          "type": "address"
+        }
+      ],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOracle",
+          "type": "address"
+        }
+      ],
+      "name": "setDefaultOracle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6d7b1783ac520c67e4dbed04f436b0d107e3919fb623f9c3dcc8c87c9f0ca22a",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x5BAcf7E843fDEF590209521B5541d6E71dc01880",
+    "contractAddress": null,
+    "transactionIndex": 4,
+    "gasUsed": "856235",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x839bec28b32d048be4ce32fb4e99010b38b0467a30e2970cbb61ae86c79fa79e",
+    "transactionHash": "0x6d7b1783ac520c67e4dbed04f436b0d107e3919fb623f9c3dcc8c87c9f0ca22a",
+    "logs": [],
+    "blockNumber": 28105545,
+    "cumulativeGasUsed": "1640631",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x5BAcf7E843fDEF590209521B5541d6E71dc01880",
+    "0x0000000000000000000000000000000000000840",
+    "0x0000000000000000000000000000000000000000"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "4ce3ff34d1964abdb3484e02493496f0",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_baseCurrency\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_defaultOracle\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"NewAdmin\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldOracle\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newOracle\",\"type\":\"address\"}],\"name\":\"NewDefaultOracle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldGuardian\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newGuardian\",\"type\":\"address\"}],\"name\":\"NewGuardian\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"underlying\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldOracle\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newOracle\",\"type\":\"address\"}],\"name\":\"NewOracle\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"underlyings\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"_oracles\",\"type\":\"address[]\"}],\"name\":\"add\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"baseCurrency\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"changeAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newGuardian\",\"type\":\"address\"}],\"name\":\"changeGuardian\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"underlyings\",\"type\":\"address[]\"}],\"name\":\"clear\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"defaultOracle\",\"outputs\":[{\"internalType\":\"contract BasePriceOracle\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cToken\",\"type\":\"address\"}],\"name\":\"getUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"guardian\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"oracles\",\"outputs\":[{\"internalType\":\"contract PriceOracle\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"underlying\",\"type\":\"address\"}],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOracle\",\"type\":\"address\"}],\"name\":\"setDefaultOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"David Lucid <david@rari.capital> (https://github.com/davidlucid) Changes by Citrus team: - added base currency - added guardian to circuit break oracle\",\"details\":\"Implements `PriceOracle`.\",\"events\":{\"NewAdmin(address,address)\":{\"details\":\"Event emitted when `admin` is changed.\"},\"NewDefaultOracle(address,address)\":{\"details\":\"Event emitted when the default oracle is changed.\"},\"NewGuardian(address,address)\":{\"details\":\"Event emitted when `guardian` is changed.\"},\"NewOracle(address,address,address)\":{\"details\":\"Event emitted when an underlying token's oracle is changed.\"}},\"kind\":\"dev\",\"methods\":{\"add(address[],address[])\":{\"details\":\"Sets `_oracles` for `underlyings`.\"},\"changeAdmin(address)\":{\"details\":\"Changes the admin and emits an event.\"},\"changeGuardian(address)\":{\"details\":\"Changes the guardian.\"},\"clear(address[])\":{\"details\":\"Unsets `oracles` of `underlyings`.\",\"params\":{\"underlyings\":\"The underlying ERC20 token addresses those `oracles` should be cleared.\"}},\"constructor\":{\"details\":\"Constructor to initialize state variables.\",\"params\":{\"_admin\":\"The admin who can assign oracles to underlying tokens.\"}},\"getUnderlyingPrice(address)\":{\"returns\":{\"_0\":\"Price in base currency of the token underlying `cToken`, scaled by `10 ** (36 - underlyingDecimals)`.\"}},\"price(address)\":{\"details\":\"Attempts to return the price in base currency of `underlying` (implements `BasePriceOracle`).\"},\"setDefaultOracle(address)\":{\"details\":\"Changes the default oracle.\"}},\"stateVariables\":{\"admin\":{\"details\":\"The administrator of this `MasterPriceOracle`.\"},\"defaultOracle\":{\"details\":\"Default/fallback `PriceOracle`.\"},\"guardian\":{\"details\":\"The guardian who can unset oracle in case it's misbehaving\"},\"oracles\":{\"details\":\"Maps underlying token addresses to `PriceOracle` contracts (can be `BasePriceOracle` contracts too).\"}},\"title\":\"MasterPriceOracle\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"baseCurrency()\":{\"notice\":\"all other tokens are priced against the base token. Its price is 1e18\"},\"getUnderlyingPrice(address)\":{\"notice\":\"Returns the price in base currency of the token underlying `cToken`.\"}},\"notice\":\"Use a combination of price oracles.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/citrus-oracle/src/MasterPriceOracle.sol\":\"MasterPriceOracle\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/citrus-oracle/lib/solmate/src/tokens/ERC20.sol\":{\"content\":\"// SPDX-License-Identifier: AGPL-3.0-only\\npragma solidity >=0.8.0;\\n\\n/// @notice Modern and gas efficient ERC20 + EIP-2612 implementation.\\n/// @author Solmate (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC20.sol)\\n/// @author Modified from Uniswap (https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)\\n/// @dev Do not manually set balances without updating totalSupply, as the sum of all user balances must not exceed it.\\nabstract contract ERC20 {\\n    /*//////////////////////////////////////////////////////////////\\n                                 EVENTS\\n    //////////////////////////////////////////////////////////////*/\\n\\n    event Transfer(address indexed from, address indexed to, uint256 amount);\\n\\n    event Approval(address indexed owner, address indexed spender, uint256 amount);\\n\\n    /*//////////////////////////////////////////////////////////////\\n                            METADATA STORAGE\\n    //////////////////////////////////////////////////////////////*/\\n\\n    string public name;\\n\\n    string public symbol;\\n\\n    uint8 public immutable decimals;\\n\\n    /*//////////////////////////////////////////////////////////////\\n                              ERC20 STORAGE\\n    //////////////////////////////////////////////////////////////*/\\n\\n    uint256 public totalSupply;\\n\\n    mapping(address => uint256) public balanceOf;\\n\\n    mapping(address => mapping(address => uint256)) public allowance;\\n\\n    /*//////////////////////////////////////////////////////////////\\n                            EIP-2612 STORAGE\\n    //////////////////////////////////////////////////////////////*/\\n\\n    uint256 internal immutable INITIAL_CHAIN_ID;\\n\\n    bytes32 internal immutable INITIAL_DOMAIN_SEPARATOR;\\n\\n    mapping(address => uint256) public nonces;\\n\\n    /*//////////////////////////////////////////////////////////////\\n                               CONSTRUCTOR\\n    //////////////////////////////////////////////////////////////*/\\n\\n    constructor(\\n        string memory _name,\\n        string memory _symbol,\\n        uint8 _decimals\\n    ) {\\n        name = _name;\\n        symbol = _symbol;\\n        decimals = _decimals;\\n\\n        INITIAL_CHAIN_ID = block.chainid;\\n        INITIAL_DOMAIN_SEPARATOR = computeDomainSeparator();\\n    }\\n\\n    /*//////////////////////////////////////////////////////////////\\n                               ERC20 LOGIC\\n    //////////////////////////////////////////////////////////////*/\\n\\n    function approve(address spender, uint256 amount) public virtual returns (bool) {\\n        allowance[msg.sender][spender] = amount;\\n\\n        emit Approval(msg.sender, spender, amount);\\n\\n        return true;\\n    }\\n\\n    function transfer(address to, uint256 amount) public virtual returns (bool) {\\n        balanceOf[msg.sender] -= amount;\\n\\n        // Cannot overflow because the sum of all user\\n        // balances can't exceed the max uint256 value.\\n        unchecked {\\n            balanceOf[to] += amount;\\n        }\\n\\n        emit Transfer(msg.sender, to, amount);\\n\\n        return true;\\n    }\\n\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) public virtual returns (bool) {\\n        uint256 allowed = allowance[from][msg.sender]; // Saves gas for limited approvals.\\n\\n        if (allowed != type(uint256).max) allowance[from][msg.sender] = allowed - amount;\\n\\n        balanceOf[from] -= amount;\\n\\n        // Cannot overflow because the sum of all user\\n        // balances can't exceed the max uint256 value.\\n        unchecked {\\n            balanceOf[to] += amount;\\n        }\\n\\n        emit Transfer(from, to, amount);\\n\\n        return true;\\n    }\\n\\n    /*//////////////////////////////////////////////////////////////\\n                             EIP-2612 LOGIC\\n    //////////////////////////////////////////////////////////////*/\\n\\n    function permit(\\n        address owner,\\n        address spender,\\n        uint256 value,\\n        uint256 deadline,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) public virtual {\\n        require(deadline >= block.timestamp, \\\"PERMIT_DEADLINE_EXPIRED\\\");\\n\\n        // Unchecked because the only math done is incrementing\\n        // the owner's nonce which cannot realistically overflow.\\n        unchecked {\\n            address recoveredAddress = ecrecover(\\n                keccak256(\\n                    abi.encodePacked(\\n                        \\\"\\\\x19\\\\x01\\\",\\n                        DOMAIN_SEPARATOR(),\\n                        keccak256(\\n                            abi.encode(\\n                                keccak256(\\n                                    \\\"Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)\\\"\\n                                ),\\n                                owner,\\n                                spender,\\n                                value,\\n                                nonces[owner]++,\\n                                deadline\\n                            )\\n                        )\\n                    )\\n                ),\\n                v,\\n                r,\\n                s\\n            );\\n\\n            require(recoveredAddress != address(0) && recoveredAddress == owner, \\\"INVALID_SIGNER\\\");\\n\\n            allowance[recoveredAddress][spender] = value;\\n        }\\n\\n        emit Approval(owner, spender, value);\\n    }\\n\\n    function DOMAIN_SEPARATOR() public view virtual returns (bytes32) {\\n        return block.chainid == INITIAL_CHAIN_ID ? INITIAL_DOMAIN_SEPARATOR : computeDomainSeparator();\\n    }\\n\\n    function computeDomainSeparator() internal view virtual returns (bytes32) {\\n        return\\n            keccak256(\\n                abi.encode(\\n                    keccak256(\\\"EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)\\\"),\\n                    keccak256(bytes(name)),\\n                    keccak256(\\\"1\\\"),\\n                    block.chainid,\\n                    address(this)\\n                )\\n            );\\n    }\\n\\n    /*//////////////////////////////////////////////////////////////\\n                        INTERNAL MINT/BURN LOGIC\\n    //////////////////////////////////////////////////////////////*/\\n\\n    function _mint(address to, uint256 amount) internal virtual {\\n        totalSupply += amount;\\n\\n        // Cannot overflow because the sum of all user\\n        // balances can't exceed the max uint256 value.\\n        unchecked {\\n            balanceOf[to] += amount;\\n        }\\n\\n        emit Transfer(address(0), to, amount);\\n    }\\n\\n    function _burn(address from, uint256 amount) internal virtual {\\n        balanceOf[from] -= amount;\\n\\n        // Cannot underflow because a user's balance\\n        // will never be larger than the total supply.\\n        unchecked {\\n            totalSupply -= amount;\\n        }\\n\\n        emit Transfer(from, address(0), amount);\\n    }\\n}\\n\",\"keccak256\":\"0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10\",\"license\":\"AGPL-3.0-only\"},\"contracts/citrus-oracle/src/MasterPriceOracle.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8.19;\\n\\nimport \\\"../lib/solmate/src/tokens/ERC20.sol\\\";\\n\\nimport \\\"./interfaces/PriceOracle.sol\\\";\\nimport \\\"./interfaces/CToken.sol\\\";\\nimport \\\"./interfaces/CErc20.sol\\\";\\n\\nimport \\\"./interfaces/BasePriceOracle.sol\\\";\\n\\n/**\\n * @title MasterPriceOracle\\n * @notice Use a combination of price oracles.\\n * @dev Implements `PriceOracle`.\\n * @author David Lucid <david@rari.capital> (https://github.com/davidlucid)\\n * Changes by Citrus team:\\n * - added base currency\\n * - added guardian to circuit break oracle\\n */\\ncontract MasterPriceOracle is PriceOracle, BasePriceOracle {\\n    /**\\n     * @dev Maps underlying token addresses to `PriceOracle` contracts (can be `BasePriceOracle` contracts too).\\n     */\\n    mapping(address => PriceOracle) public oracles;\\n\\n    /**\\n     * @dev Default/fallback `PriceOracle`.\\n     */\\n    BasePriceOracle public defaultOracle;\\n\\n    /**\\n     * @dev The administrator of this `MasterPriceOracle`.\\n     */\\n    address public admin;\\n\\n    /**\\n     * @dev The guardian who can unset oracle in case it's misbehaving\\n     */\\n    address public guardian;\\n\\n    /// @notice all other tokens are priced against the base token. Its price is 1e18\\n    address public immutable baseCurrency;\\n\\n    /**\\n     * @dev Event emitted when `admin` is changed.\\n     */\\n    event NewAdmin(address oldAdmin, address newAdmin);\\n\\n    /**\\n     * @dev Event emitted when `guardian` is changed.\\n     */\\n    event NewGuardian(address oldGuardian, address newGuardian);\\n\\n    /**\\n     * @dev Event emitted when the default oracle is changed.\\n     */\\n    event NewDefaultOracle(address oldOracle, address newOracle);\\n\\n    /**\\n     * @dev Event emitted when an underlying token's oracle is changed.\\n     */\\n    event NewOracle(address underlying, address oldOracle, address newOracle);\\n\\n    /**\\n     * @dev Constructor to initialize state variables.\\n     * @param _admin The admin who can assign oracles to underlying tokens.\\n     */\\n    constructor(address _admin, address _baseCurrency, address _defaultOracle) {\\n        require(\\n            _defaultOracle == address(0) || BasePriceOracle(_defaultOracle).baseCurrency() == _baseCurrency,\\n            \\\"Oracle baseCurrency needs to be the same as defaultOracle\\\"\\n        );\\n\\n        admin = _admin;\\n        baseCurrency = _baseCurrency;\\n        defaultOracle = BasePriceOracle(_defaultOracle);\\n    }\\n\\n    /**\\n     * @dev Sets `_oracles` for `underlyings`.\\n     */\\n    function add(address[] calldata underlyings, address[] calldata _oracles) external onlyAdmin {\\n        // Input validation\\n        require(\\n            underlyings.length > 0 && underlyings.length == _oracles.length,\\n            \\\"Lengths of both arrays must be equal and greater than 0.\\\"\\n        );\\n\\n        // Assign oracles to underlying tokens\\n        for (uint256 i = 0; i < underlyings.length; i++) {\\n            address underlying = underlyings[i];\\n            address oldOracle = address(oracles[underlying]);\\n            PriceOracle newOracle = PriceOracle(_oracles[i]);\\n            oracles[underlying] = newOracle;\\n            emit NewOracle(underlying, oldOracle, address(newOracle));\\n        }\\n    }\\n\\n    /**\\n     * @dev Unsets `oracles` of `underlyings`.\\n     * @param underlyings The underlying ERC20 token addresses those `oracles` should be cleared.\\n     */\\n    function clear(address[] calldata underlyings) external onlyAdminOrGuardian {\\n        // Unassign oracles of underlying tokens\\n        for (uint256 i = 0; i < underlyings.length; i++) {\\n            address underlying = underlyings[i];\\n            emit NewOracle(underlying, address(oracles[underlying]), address(0));\\n            oracles[underlying] = BasePriceOracle(address(0));\\n        }\\n    }\\n\\n    /**\\n     * @dev Changes the default oracle.\\n     */\\n    function setDefaultOracle(address newOracle) external onlyAdmin {\\n        require(\\n            newOracle == address(0) || BasePriceOracle(newOracle).baseCurrency() == baseCurrency,\\n            \\\"Oracle baseCurrency needs to be the same as defaultOracle\\\"\\n        );\\n\\n        PriceOracle oldOracle = defaultOracle;\\n        defaultOracle = BasePriceOracle(newOracle);\\n        emit NewDefaultOracle(address(oldOracle), address(newOracle));\\n    }\\n\\n    /**\\n     * @dev Changes the admin and emits an event.\\n     */\\n    function changeAdmin(address newAdmin) external onlyAdmin {\\n        address oldAdmin = admin;\\n        admin = newAdmin;\\n        emit NewAdmin(oldAdmin, newAdmin);\\n    }\\n\\n    /**\\n     * @dev Changes the guardian.\\n     */\\n    function changeGuardian(address newGuardian) external onlyAdmin {\\n        address oldGuardian = guardian;\\n        guardian = newGuardian;\\n        emit NewGuardian(oldGuardian, newGuardian);\\n    }\\n\\n    /**\\n     * @dev Modifier that checks if `msg.sender == admin`.\\n     */\\n    modifier onlyAdmin() {\\n        require(msg.sender == admin, \\\"Sender is not the admin.\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Modifier that checks if `msg.sender` is admin or guardian.\\n     */\\n    modifier onlyAdminOrGuardian() {\\n        require(msg.sender == admin || msg.sender == guardian, \\\"Sender is not the admin or guardian.\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @notice Returns the price in base currency of the token underlying `cToken`.\\n     * @return Price in base currency of the token underlying `cToken`, scaled by `10 ** (36 - underlyingDecimals)`.\\n     */\\n    function getUnderlyingPrice(address cToken) external view returns (uint256) {\\n        // Get underlying ERC20 token address\\n        address underlying = CErc20(cToken).underlying();\\n\\n        // Get underlying price\\n        uint256 underlyingPrice = _price(underlying);\\n        uint256 underlyingDecimals = ERC20(underlying).decimals();\\n\\n        return underlyingDecimals <= 18\\n            ? underlyingPrice * (10 ** (18 - underlyingDecimals))\\n            : underlyingPrice / (10 ** (underlyingDecimals - 18));\\n    }\\n\\n    /**\\n     * @dev Attempts to return the price in base currency of `underlying` (implements `BasePriceOracle`).\\n     */\\n    function price(address underlying) external view returns (uint256) {\\n        return _price(underlying);\\n    }\\n\\n    /**\\n     * @dev Attempts to return the price in base currency of `underlying`\\n     */\\n    function _price(address underlying) internal view returns (uint256) {\\n        if (underlying == baseCurrency) {\\n            return 1e18;\\n        }\\n\\n        // Get underlying price from assigned oracle\\n        PriceOracle oracle = oracles[underlying];\\n        if (address(oracle) != address(0)) {\\n            return BasePriceOracle(address(oracle)).price(underlying);\\n        }\\n        if (address(defaultOracle) != address(0)) {\\n            return BasePriceOracle(address(defaultOracle)).price(underlying);\\n        }\\n        revert(\\\"Price oracle not found for this underlying token address.\\\");\\n    }\\n}\\n\",\"keccak256\":\"0x470e4efb6143b20e6cf815039464b589b1efbc90d1fac34f292cc5eb8ccb16f7\",\"license\":\"UNLICENSED\"},\"contracts/citrus-oracle/src/interfaces/BasePriceOracle.sol\":{\"content\":\"// SPDX-License-Identifier: BSD-3-Clause\\npragma solidity 0.8;\\n\\nimport \\\"./PriceOracle.sol\\\";\\n\\ninterface BasePriceOracle is PriceOracle {\\n    /**\\n     * @notice Get the underlying price of a cToken asset\\n     * @param cToken The cToken to get the underlying price of\\n     * @return The underlying asset price mantissa (scaled by 1e18).\\n     *  Zero means the price is unavailable.\\n     */\\n    function getUnderlyingPrice(address cToken) external view returns (uint256);\\n\\n    /**\\n     * @notice Get the base currency of the oracle\\n     * @return The base currency against all currencies are priced against.\\n     */\\n    function baseCurrency() external view returns (address);\\n}\\n\",\"keccak256\":\"0xde2ebfef2b934a3949092eaa881313b3f19f7daa84f5802e97f2eb9fbde80f74\",\"license\":\"BSD-3-Clause\"},\"contracts/citrus-oracle/src/interfaces/CErc20.sol\":{\"content\":\"// SPDX-License-Identifier: BSD-3-Clause\\npragma solidity 0.8;\\n\\nimport \\\"./CToken.sol\\\";\\n\\n/**\\n * @title Compound's CErc20 Contract\\n * @notice CTokens which wrap an EIP-20 underlying\\n * @author Compound\\n */\\ninterface CErc20 is CToken {\\n    function underlying() external view returns (address);\\n\\n    function liquidateBorrow(address borrower, uint256 repayAmount, CToken cTokenCollateral)\\n        external\\n        returns (uint256);\\n}\\n\",\"keccak256\":\"0x40d8f4c9ea650e2bfe755b18c86a960834620078f739ed779493911ac4a2de10\",\"license\":\"BSD-3-Clause\"},\"contracts/citrus-oracle/src/interfaces/CToken.sol\":{\"content\":\"// SPDX-License-Identifier: BSD-3-Clause\\npragma solidity 0.8;\\n\\n/**\\n * @title Compound's CToken Contract\\n * @notice Abstract base for CTokens\\n * @author Compound\\n */\\ninterface CToken {\\n    function admin() external view returns (address);\\n\\n    function adminHasRights() external view returns (bool);\\n\\n    function fuseAdminHasRights() external view returns (bool);\\n\\n    function symbol() external view returns (string memory);\\n\\n    function comptroller() external view returns (address);\\n\\n    function adminFeeMantissa() external view returns (uint256);\\n\\n    function fuseFeeMantissa() external view returns (uint256);\\n\\n    function reserveFactorMantissa() external view returns (uint256);\\n\\n    function totalReserves() external view returns (uint256);\\n\\n    function totalAdminFees() external view returns (uint256);\\n\\n    function totalFuseFees() external view returns (uint256);\\n\\n    function isCToken() external view returns (bool);\\n\\n    function isCEther() external view returns (bool);\\n\\n    function balanceOf(address owner) external view returns (uint256);\\n\\n    function balanceOfUnderlying(address owner) external returns (uint256);\\n\\n    function borrowRatePerBlock() external view returns (uint256);\\n\\n    function supplyRatePerBlock() external view returns (uint256);\\n\\n    function totalBorrowsCurrent() external returns (uint256);\\n\\n    function borrowBalanceStored(address account) external view returns (uint256);\\n\\n    function exchangeRateStored() external view returns (uint256);\\n\\n    function getCash() external view returns (uint256);\\n\\n    function redeem(uint256 redeemTokens) external returns (uint256);\\n\\n    function redeemUnderlying(uint256 redeemAmount) external returns (uint256);\\n}\\n\",\"keccak256\":\"0x76ef32019ba33c8ba7c6c38c3c555041e22c23caffa36a584a3f3cec47ee6a7e\",\"license\":\"BSD-3-Clause\"},\"contracts/citrus-oracle/src/interfaces/PriceOracle.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8;\\n\\ninterface PriceOracle {\\n    /**\\n     * @notice Get the price of an underlying asset.\\n     * @param underlying The underlying asset to get the price of.\\n     * @return The underlying asset price in ETH as a mantissa (scaled by 1e18).\\n     * Zero means the price is unavailable.\\n     */\\n    function price(address underlying) external view returns (uint256);\\n}\\n\",\"keccak256\":\"0xd7a60dfab12fc66b9d346c38bbae621e372cfa1b8d013c68acff9bfc7dd1649b\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x60a06040523480156200001157600080fd5b506040516200100f3803806200100f83398101604081905262000034916200018c565b6001600160a01b0381161580620000c05750816001600160a01b0316816001600160a01b03166392a85fde6040518163ffffffff1660e01b8152600401602060405180830381865afa1580156200008f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190620000b59190620001d6565b6001600160a01b0316145b620001375760405162461bcd60e51b815260206004820152603960248201527f4f7261636c65206261736543757272656e6379206e6565647320746f2062652060448201527f7468652073616d652061732064656661756c744f7261636c6500000000000000606482015260840160405180910390fd5b600280546001600160a01b039485166001600160a01b03199182161790915591831660805260018054919093169116179055620001fb565b80516001600160a01b03811681146200018757600080fd5b919050565b600080600060608486031215620001a257600080fd5b620001ad846200016f565b9250620001bd602085016200016f565b9150620001cd604085016200016f565b90509250925092565b600060208284031215620001e957600080fd5b620001f4826200016f565b9392505050565b608051610dea620002256000396000818161013c0152818161065101526108ea0152610dea6000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80639c9192c6116100715780639c9192c61461015e578063addd509914610171578063aea910781461019a578063c44014d2146101bb578063f851a440146101ce578063fc57d4df146101e157600080fd5b80632a9e1aa4146100b95780632fcb4f04146100ce578063452a9320146100e157806380dce169146101115780638f2839701461012457806392a85fde14610137575b600080fd5b6100cc6100c7366004610ac0565b6101f4565b005b6100cc6100dc366004610b1a565b61033f565b6003546100f4906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6001546100f4906001600160a01b031681565b6100cc610132366004610b1a565b6103cb565b6100f47f000000000000000000000000000000000000000000000000000000000000000081565b6100cc61016c366004610b37565b61044f565b6100f461017f366004610b1a565b6000602081905290815260409020546001600160a01b031681565b6101ad6101a8366004610b1a565b610603565b604051908152602001610108565b6100cc6101c9366004610b1a565b610614565b6002546100f4906001600160a01b031681565b6101ad6101ef366004610b1a565b6107b2565b6002546001600160a01b031633148061021757506003546001600160a01b031633145b6102745760405162461bcd60e51b8152602060048201526024808201527f53656e646572206973206e6f74207468652061646d696e206f7220677561726460448201526334b0b71760e11b60648201526084015b60405180910390fd5b60005b8181101561033a57600083838381811061029357610293610ba3565b90506020020160208101906102a89190610b1a565b6001600160a01b03818116600081815260208181526040808320548151948552909416908301528183015290519192507f10e7c87bebf274db4de1b5f9fc731d6f83096e550bd871b681314578404d3126919081900360600190a16001600160a01b0316600090815260208190526040902080546001600160a01b03191690558061033281610bcf565b915050610277565b505050565b6002546001600160a01b031633146103695760405162461bcd60e51b815260040161026b90610be8565b600380546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527f08fdaf06427a2010e5958f4329b566993472d14ce81d3f16ce7f2a2660da98e391015b60405180910390a15050565b6002546001600160a01b031633146103f55760405162461bcd60e51b815260040161026b90610be8565b600280546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527ff9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc91016103bf565b6002546001600160a01b031633146104795760405162461bcd60e51b815260040161026b90610be8565b821580159061048757508281145b6104f95760405162461bcd60e51b815260206004820152603860248201527f4c656e67746873206f6620626f746820617272617973206d757374206265206560448201527f7175616c20616e642067726561746572207468616e20302e0000000000000000606482015260840161026b565b60005b838110156105fc57600085858381811061051857610518610ba3565b905060200201602081019061052d9190610b1a565b6001600160a01b0380821660009081526020819052604081205492935091169085858581811061055f5761055f610ba3565b90506020020160208101906105749190610b1a565b6001600160a01b038481166000818152602081815260409182902080546001600160a01b0319168686169081179091558251938452938716908301528101919091529091507f10e7c87bebf274db4de1b5f9fc731d6f83096e550bd871b681314578404d31269060600160405180910390a150505080806105f490610bcf565b9150506104fc565b5050505050565b600061060e826108e6565b92915050565b6002546001600160a01b0316331461063e5760405162461bcd60e51b815260040161026b90610be8565b6001600160a01b03811615806106e657507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316816001600160a01b03166392a85fde6040518163ffffffff1660e01b8152600401602060405180830381865afa1580156106b7573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106db9190610c1f565b6001600160a01b0316145b6107585760405162461bcd60e51b815260206004820152603960248201527f4f7261636c65206261736543757272656e6379206e6565647320746f2062652060448201527f7468652073616d652061732064656661756c744f7261636c6500000000000000606482015260840161026b565b600180546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527f0df2d61fdd201e9633368dca495e2c469e36c48039263448dd8a2a954c19ef1a91016103bf565b600080826001600160a01b0316636f307dc36040518163ffffffff1660e01b8152600401602060405180830381865afa1580156107f3573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108179190610c1f565b90506000610824826108e6565b90506000826001600160a01b031663313ce5676040518163ffffffff1660e01b8152600401602060405180830381865afa158015610866573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088a9190610c3c565b60ff16905060128111156108bd576108a3601282610c5f565b6108ae90600a610d56565b6108b89083610d62565b6108dd565b6108c8816012610c5f565b6108d390600a610d56565b6108dd9083610d84565b95945050505050565b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316826001600160a01b0316036109305750670de0b6b3a7640000919050565b6001600160a01b038083166000908152602081905260409020541680156109c3576040516315d5220f60e31b81526001600160a01b03848116600483015282169063aea91078906024015b602060405180830381865afa158015610998573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109bc9190610d9b565b9392505050565b6001546001600160a01b031615610a06576001546040516315d5220f60e31b81526001600160a01b0385811660048301529091169063aea910789060240161097b565b60405162461bcd60e51b815260206004820152603960248201527f5072696365206f7261636c65206e6f7420666f756e6420666f7220746869732060448201527f756e6465726c79696e6720746f6b656e20616464726573732e00000000000000606482015260840161026b565b60008083601f840112610a8657600080fd5b50813567ffffffffffffffff811115610a9e57600080fd5b6020830191508360208260051b8501011115610ab957600080fd5b9250929050565b60008060208385031215610ad357600080fd5b823567ffffffffffffffff811115610aea57600080fd5b610af685828601610a74565b90969095509350505050565b6001600160a01b0381168114610b1757600080fd5b50565b600060208284031215610b2c57600080fd5b81356109bc81610b02565b60008060008060408587031215610b4d57600080fd5b843567ffffffffffffffff80821115610b6557600080fd5b610b7188838901610a74565b90965094506020870135915080821115610b8a57600080fd5b50610b9787828801610a74565b95989497509550505050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b600060018201610be157610be1610bb9565b5060010190565b60208082526018908201527f53656e646572206973206e6f74207468652061646d696e2e0000000000000000604082015260600190565b600060208284031215610c3157600080fd5b81516109bc81610b02565b600060208284031215610c4e57600080fd5b815160ff811681146109bc57600080fd5b8181038181111561060e5761060e610bb9565b600181815b80851115610cad578160001904821115610c9357610c93610bb9565b80851615610ca057918102915b93841c9390800290610c77565b509250929050565b600082610cc45750600161060e565b81610cd15750600061060e565b8160018114610ce75760028114610cf157610d0d565b600191505061060e565b60ff841115610d0257610d02610bb9565b50506001821b61060e565b5060208310610133831016604e8410600b8410161715610d30575081810a61060e565b610d3a8383610c72565b8060001904821115610d4e57610d4e610bb9565b029392505050565b60006109bc8383610cb5565b600082610d7f57634e487b7160e01b600052601260045260246000fd5b500490565b808202811582820484141761060e5761060e610bb9565b600060208284031215610dad57600080fd5b505191905056fea264697066735822122010ecab25fc88d15a5d3765ba77a99c8b36db702c02eba892e4e5745bc904710f64736f6c63430008130033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100b45760003560e01c80639c9192c6116100715780639c9192c61461015e578063addd509914610171578063aea910781461019a578063c44014d2146101bb578063f851a440146101ce578063fc57d4df146101e157600080fd5b80632a9e1aa4146100b95780632fcb4f04146100ce578063452a9320146100e157806380dce169146101115780638f2839701461012457806392a85fde14610137575b600080fd5b6100cc6100c7366004610ac0565b6101f4565b005b6100cc6100dc366004610b1a565b61033f565b6003546100f4906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6001546100f4906001600160a01b031681565b6100cc610132366004610b1a565b6103cb565b6100f47f000000000000000000000000000000000000000000000000000000000000000081565b6100cc61016c366004610b37565b61044f565b6100f461017f366004610b1a565b6000602081905290815260409020546001600160a01b031681565b6101ad6101a8366004610b1a565b610603565b604051908152602001610108565b6100cc6101c9366004610b1a565b610614565b6002546100f4906001600160a01b031681565b6101ad6101ef366004610b1a565b6107b2565b6002546001600160a01b031633148061021757506003546001600160a01b031633145b6102745760405162461bcd60e51b8152602060048201526024808201527f53656e646572206973206e6f74207468652061646d696e206f7220677561726460448201526334b0b71760e11b60648201526084015b60405180910390fd5b60005b8181101561033a57600083838381811061029357610293610ba3565b90506020020160208101906102a89190610b1a565b6001600160a01b03818116600081815260208181526040808320548151948552909416908301528183015290519192507f10e7c87bebf274db4de1b5f9fc731d6f83096e550bd871b681314578404d3126919081900360600190a16001600160a01b0316600090815260208190526040902080546001600160a01b03191690558061033281610bcf565b915050610277565b505050565b6002546001600160a01b031633146103695760405162461bcd60e51b815260040161026b90610be8565b600380546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527f08fdaf06427a2010e5958f4329b566993472d14ce81d3f16ce7f2a2660da98e391015b60405180910390a15050565b6002546001600160a01b031633146103f55760405162461bcd60e51b815260040161026b90610be8565b600280546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527ff9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc91016103bf565b6002546001600160a01b031633146104795760405162461bcd60e51b815260040161026b90610be8565b821580159061048757508281145b6104f95760405162461bcd60e51b815260206004820152603860248201527f4c656e67746873206f6620626f746820617272617973206d757374206265206560448201527f7175616c20616e642067726561746572207468616e20302e0000000000000000606482015260840161026b565b60005b838110156105fc57600085858381811061051857610518610ba3565b905060200201602081019061052d9190610b1a565b6001600160a01b0380821660009081526020819052604081205492935091169085858581811061055f5761055f610ba3565b90506020020160208101906105749190610b1a565b6001600160a01b038481166000818152602081815260409182902080546001600160a01b0319168686169081179091558251938452938716908301528101919091529091507f10e7c87bebf274db4de1b5f9fc731d6f83096e550bd871b681314578404d31269060600160405180910390a150505080806105f490610bcf565b9150506104fc565b5050505050565b600061060e826108e6565b92915050565b6002546001600160a01b0316331461063e5760405162461bcd60e51b815260040161026b90610be8565b6001600160a01b03811615806106e657507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316816001600160a01b03166392a85fde6040518163ffffffff1660e01b8152600401602060405180830381865afa1580156106b7573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106db9190610c1f565b6001600160a01b0316145b6107585760405162461bcd60e51b815260206004820152603960248201527f4f7261636c65206261736543757272656e6379206e6565647320746f2062652060448201527f7468652073616d652061732064656661756c744f7261636c6500000000000000606482015260840161026b565b600180546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527f0df2d61fdd201e9633368dca495e2c469e36c48039263448dd8a2a954c19ef1a91016103bf565b600080826001600160a01b0316636f307dc36040518163ffffffff1660e01b8152600401602060405180830381865afa1580156107f3573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108179190610c1f565b90506000610824826108e6565b90506000826001600160a01b031663313ce5676040518163ffffffff1660e01b8152600401602060405180830381865afa158015610866573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088a9190610c3c565b60ff16905060128111156108bd576108a3601282610c5f565b6108ae90600a610d56565b6108b89083610d62565b6108dd565b6108c8816012610c5f565b6108d390600a610d56565b6108dd9083610d84565b95945050505050565b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316826001600160a01b0316036109305750670de0b6b3a7640000919050565b6001600160a01b038083166000908152602081905260409020541680156109c3576040516315d5220f60e31b81526001600160a01b03848116600483015282169063aea91078906024015b602060405180830381865afa158015610998573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109bc9190610d9b565b9392505050565b6001546001600160a01b031615610a06576001546040516315d5220f60e31b81526001600160a01b0385811660048301529091169063aea910789060240161097b565b60405162461bcd60e51b815260206004820152603960248201527f5072696365206f7261636c65206e6f7420666f756e6420666f7220746869732060448201527f756e6465726c79696e6720746f6b656e20616464726573732e00000000000000606482015260840161026b565b60008083601f840112610a8657600080fd5b50813567ffffffffffffffff811115610a9e57600080fd5b6020830191508360208260051b8501011115610ab957600080fd5b9250929050565b60008060208385031215610ad357600080fd5b823567ffffffffffffffff811115610aea57600080fd5b610af685828601610a74565b90969095509350505050565b6001600160a01b0381168114610b1757600080fd5b50565b600060208284031215610b2c57600080fd5b81356109bc81610b02565b60008060008060408587031215610b4d57600080fd5b843567ffffffffffffffff80821115610b6557600080fd5b610b7188838901610a74565b90965094506020870135915080821115610b8a57600080fd5b50610b9787828801610a74565b95989497509550505050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b600060018201610be157610be1610bb9565b5060010190565b60208082526018908201527f53656e646572206973206e6f74207468652061646d696e2e0000000000000000604082015260600190565b600060208284031215610c3157600080fd5b81516109bc81610b02565b600060208284031215610c4e57600080fd5b815160ff811681146109bc57600080fd5b8181038181111561060e5761060e610bb9565b600181815b80851115610cad578160001904821115610c9357610c93610bb9565b80851615610ca057918102915b93841c9390800290610c77565b509250929050565b600082610cc45750600161060e565b81610cd15750600061060e565b8160018114610ce75760028114610cf157610d0d565b600191505061060e565b60ff841115610d0257610d02610bb9565b50506001821b61060e565b5060208310610133831016604e8410600b8410161715610d30575081810a61060e565b610d3a8383610c72565b8060001904821115610d4e57610d4e610bb9565b029392505050565b60006109bc8383610cb5565b600082610d7f57634e487b7160e01b600052601260045260246000fd5b500490565b808202811582820484141761060e5761060e610bb9565b600060208284031215610dad57600080fd5b505191905056fea264697066735822122010ecab25fc88d15a5d3765ba77a99c8b36db702c02eba892e4e5745bc904710f64736f6c63430008130033",
+  "devdoc": {
+    "author": "David Lucid <david@rari.capital> (https://github.com/davidlucid) Changes by Citrus team: - added base currency - added guardian to circuit break oracle",
+    "details": "Implements `PriceOracle`.",
+    "events": {
+      "NewAdmin(address,address)": {
+        "details": "Event emitted when `admin` is changed."
+      },
+      "NewDefaultOracle(address,address)": {
+        "details": "Event emitted when the default oracle is changed."
+      },
+      "NewGuardian(address,address)": {
+        "details": "Event emitted when `guardian` is changed."
+      },
+      "NewOracle(address,address,address)": {
+        "details": "Event emitted when an underlying token's oracle is changed."
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "add(address[],address[])": {
+        "details": "Sets `_oracles` for `underlyings`."
+      },
+      "changeAdmin(address)": {
+        "details": "Changes the admin and emits an event."
+      },
+      "changeGuardian(address)": {
+        "details": "Changes the guardian."
+      },
+      "clear(address[])": {
+        "details": "Unsets `oracles` of `underlyings`.",
+        "params": {
+          "underlyings": "The underlying ERC20 token addresses those `oracles` should be cleared."
+        }
+      },
+      "constructor": {
+        "details": "Constructor to initialize state variables.",
+        "params": {
+          "_admin": "The admin who can assign oracles to underlying tokens."
+        }
+      },
+      "getUnderlyingPrice(address)": {
+        "returns": {
+          "_0": "Price in base currency of the token underlying `cToken`, scaled by `10 ** (36 - underlyingDecimals)`."
+        }
+      },
+      "price(address)": {
+        "details": "Attempts to return the price in base currency of `underlying` (implements `BasePriceOracle`)."
+      },
+      "setDefaultOracle(address)": {
+        "details": "Changes the default oracle."
+      }
+    },
+    "stateVariables": {
+      "admin": {
+        "details": "The administrator of this `MasterPriceOracle`."
+      },
+      "defaultOracle": {
+        "details": "Default/fallback `PriceOracle`."
+      },
+      "guardian": {
+        "details": "The guardian who can unset oracle in case it's misbehaving"
+      },
+      "oracles": {
+        "details": "Maps underlying token addresses to `PriceOracle` contracts (can be `BasePriceOracle` contracts too)."
+      }
+    },
+    "title": "MasterPriceOracle",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "baseCurrency()": {
+        "notice": "all other tokens are priced against the base token. Its price is 1e18"
+      },
+      "getUnderlyingPrice(address)": {
+        "notice": "Returns the price in base currency of the token underlying `cToken`."
+      }
+    },
+    "notice": "Use a combination of price oracles.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 9271,
+        "contract": "contracts/citrus-oracle/src/MasterPriceOracle.sol:MasterPriceOracle",
+        "label": "oracles",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_contract(PriceOracle)9935)"
+      },
+      {
+        "astId": 9275,
+        "contract": "contracts/citrus-oracle/src/MasterPriceOracle.sol:MasterPriceOracle",
+        "label": "defaultOracle",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_contract(BasePriceOracle)9771"
+      },
+      {
+        "astId": 9278,
+        "contract": "contracts/citrus-oracle/src/MasterPriceOracle.sol:MasterPriceOracle",
+        "label": "admin",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      },
+      {
+        "astId": 9281,
+        "contract": "contracts/citrus-oracle/src/MasterPriceOracle.sol:MasterPriceOracle",
+        "label": "guardian",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(BasePriceOracle)9771": {
+        "encoding": "inplace",
+        "label": "contract BasePriceOracle",
+        "numberOfBytes": "20"
+      },
+      "t_contract(PriceOracle)9935": {
+        "encoding": "inplace",
+        "label": "contract PriceOracle",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_contract(PriceOracle)9935)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => contract PriceOracle)",
+        "numberOfBytes": "32",
+        "value": "t_contract(PriceOracle)9935"
+      }
+    }
+  }
+}

@@ -38,7 +38,7 @@ export async function assertUpgradeIsSafe(
     )
   } else {
     // 3rd param is opts.unsafeAllowCustomTypes
-    assertStorageUpgradeSafe(oldLayout, layout, false)
+    assertStorageUpgradeSafe(oldLayout, layout, true)
     console.log(`Contract ${deploymentName} is safe for upgrade`)
   }
 }

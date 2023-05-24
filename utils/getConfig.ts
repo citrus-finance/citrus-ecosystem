@@ -38,6 +38,15 @@ interface Config {
     feeTaker: string
     vaults: (Aave2LeveragedVault | MockVault)[]
   }
+  oracle: {
+    tokens: {
+      symbol: string
+      address: string
+      type: 'chainlink' | 'none'
+      base: 'USD'
+      aggregator: string
+    }[]
+  }
 }
 
 // TODO: check all addresses are checksummed

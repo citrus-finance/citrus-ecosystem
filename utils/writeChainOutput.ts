@@ -24,6 +24,12 @@ interface Output {
       swapper: string
     }
   }
+  oracle: {
+    [symbol: string]: {
+      address: string
+      type: 'chainlink' | 'none'
+    }
+  }
 }
 
 export default function writeChainOutput<P extends string>(path: P, value: GetFieldType<Output, P>) {

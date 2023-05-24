@@ -4,6 +4,20 @@ import _ from 'lodash'
 
 interface Output {
   timelock: string
+  feeDistributor: string
+  poolDirectory: string
+  comptroller: string
+  cErc20Delegate: string
+  cEtherDelegate: string
+  oracle: {
+    master: string
+    chainlink: string
+  }
+  interestRateModels: {
+    general: string
+    stable: string
+  }
+  poolLens: string
 }
 
 export default function writeAllOutput<P extends string>(
@@ -11,7 +25,7 @@ export default function writeAllOutput<P extends string>(
   value: GetFieldType<Output, P>,
   allowOverwrite = false
 ) {
-  const p = '/output/all.json'
+  const p = 'output/all.json'
 
   const outputData = (() => {
     try {
@@ -22,7 +36,7 @@ export default function writeAllOutput<P extends string>(
   })()
 
   if (!allowOverwrite && _.get(outputData, path) != undefined && _.get(outputData, path) !== value) {
-    throw new Error(``)
+    throw new Error(`Value for ${path} already set`)
   }
 
   _.set(outputData, path, value)

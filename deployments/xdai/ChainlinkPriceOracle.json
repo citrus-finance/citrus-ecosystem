@@ -1,0 +1,268 @@
+{
+  "address": "0xf54bFc9c3FB6f6Aa73A7660Ae6EA1A95D1509C0E",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oldAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "NewAdmin",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "changeAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "feedBaseCurrencies",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "underlying",
+          "type": "address"
+        }
+      ],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "priceFeeds",
+      "outputs": [
+        {
+          "internalType": "contract AggregatorV3Interface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "underlyings",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "feeds",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address",
+          "name": "baseCurrency",
+          "type": "address"
+        }
+      ],
+      "name": "setPriceFeeds",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xfc629d9260be7be323676e11776aacd56e9780bddfe3ce02eb6098c9a1d7fda6",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x5BAcf7E843fDEF590209521B5541d6E71dc01880",
+    "contractAddress": null,
+    "transactionIndex": 6,
+    "gasUsed": "645237",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xbafa30c82da3cc1bfa3938b63288c0fc9cf46bc6f9020229d0ea54c41b24795e",
+    "transactionHash": "0xfc629d9260be7be323676e11776aacd56e9780bddfe3ce02eb6098c9a1d7fda6",
+    "logs": [],
+    "blockNumber": 28105547,
+    "cumulativeGasUsed": "1763671",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x5BAcf7E843fDEF590209521B5541d6E71dc01880"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "4ce3ff34d1964abdb3484e02493496f0",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"NewAdmin\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"changeAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"feedBaseCurrencies\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"underlying\",\"type\":\"address\"}],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"priceFeeds\",\"outputs\":[{\"internalType\":\"contract AggregatorV3Interface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"underlyings\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"feeds\",\"type\":\"address[]\"},{\"internalType\":\"address\",\"name\":\"baseCurrency\",\"type\":\"address\"}],\"name\":\"setPriceFeeds\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"David Lucid <david@rari.capital> (https://github.com/davidlucid) Changes by Citrus team: - remove hardcoded base currencies, uses the master oracle instead\",\"details\":\"Implements `PriceOracle`.\",\"events\":{\"NewAdmin(address,address)\":{\"details\":\"Event emitted when `admin` is changed.\"}},\"kind\":\"dev\",\"methods\":{\"changeAdmin(address)\":{\"details\":\"Changes the admin and emits an event.\"},\"constructor\":{\"details\":\"Constructor to set admin and canAdminOverwrite.\"},\"price(address)\":{\"details\":\"Function returning the price in base currency of `underlying`.\"},\"setPriceFeeds(address[],address[],address)\":{\"details\":\"Admin-only function to set price feeds.\",\"params\":{\"baseCurrency\":\"The currency in which `feeds` are based.\",\"feeds\":\"The Chainlink price feed contract addresses for each of `underlyings`.\",\"underlyings\":\"Underlying token addresses for which to set price feeds.\"}}},\"stateVariables\":{\"admin\":{\"details\":\"The administrator of this `MasterPriceOracle`.\"}},\"title\":\"ChainlinkPriceOracle\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"feedBaseCurrencies(address)\":{\"notice\":\"Maps ERC20 token addresses to enums indicating the base currency of the feed.\"},\"priceFeeds(address)\":{\"notice\":\"Maps ERC20 token addresses to ETH-based Chainlink price feed contracts.\"}},\"notice\":\"Returns prices from Chainlink.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/citrus-oracle/src/ChainlinkPriceOracle.sol\":\"ChainlinkPriceOracle\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/citrus-oracle/external/chainlink/AggregatorV3Interface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8;\\n\\ninterface AggregatorV3Interface {\\n    function decimals() external view returns (uint8);\\n\\n    function description() external view returns (string memory);\\n\\n    function version() external view returns (uint256);\\n\\n    // getRoundData and latestRoundData should both raise \\\"No data present\\\"\\n    // if they do not have data to report, instead of returning unset values\\n    // which could be misinterpreted as actual reported values.\\n    function getRoundData(uint80 _roundId)\\n        external\\n        view\\n        returns (\\n            uint80 roundId,\\n            int256 answer,\\n            uint256 startedAt,\\n            uint256 updatedAt,\\n            uint80 answeredInRound\\n        );\\n\\n    function latestRoundData()\\n        external\\n        view\\n        returns (\\n            uint80 roundId,\\n            int256 answer,\\n            uint256 startedAt,\\n            uint256 updatedAt,\\n            uint80 answeredInRound\\n        );\\n}\\n\",\"keccak256\":\"0x084d017ad7a1b9a55bf88436988c4cb07cf4c91cc0514fb9cb293723b95554bb\",\"license\":\"MIT\"},\"contracts/citrus-oracle/src/ChainlinkPriceOracle.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8.19;\\n\\nimport \\\"../external/chainlink/AggregatorV3Interface.sol\\\";\\n\\nimport \\\"./interfaces/PriceOracle.sol\\\";\\nimport \\\"./interfaces/BasePriceOracle.sol\\\";\\n\\n/**\\n * @title ChainlinkPriceOracle\\n * @notice Returns prices from Chainlink.\\n * @dev Implements `PriceOracle`.\\n * @author David Lucid <david@rari.capital> (https://github.com/davidlucid)\\n * Changes by Citrus team:\\n * - remove hardcoded base currencies, uses the master oracle instead\\n */\\ncontract ChainlinkPriceOracle is PriceOracle {\\n    /**\\n     * @notice Maps ERC20 token addresses to ETH-based Chainlink price feed contracts.\\n     */\\n    mapping(address => AggregatorV3Interface) public priceFeeds;\\n\\n    /**\\n     * @notice Maps ERC20 token addresses to enums indicating the base currency of the feed.\\n     */\\n    mapping(address => address) public feedBaseCurrencies;\\n\\n    /**\\n     * @dev The administrator of this `MasterPriceOracle`.\\n     */\\n    address public admin;\\n\\n    /**\\n     * @dev Constructor to set admin and canAdminOverwrite.\\n     */\\n    constructor(address _admin) {\\n        admin = _admin;\\n    }\\n\\n    /**\\n     * @dev Changes the admin and emits an event.\\n     */\\n    function changeAdmin(address newAdmin) external onlyAdmin {\\n        address oldAdmin = admin;\\n        admin = newAdmin;\\n        emit NewAdmin(oldAdmin, newAdmin);\\n    }\\n\\n    /**\\n     * @dev Event emitted when `admin` is changed.\\n     */\\n    event NewAdmin(address oldAdmin, address newAdmin);\\n\\n    /**\\n     * @dev Modifier that checks if `msg.sender == admin`.\\n     */\\n    modifier onlyAdmin() {\\n        require(msg.sender == admin, \\\"Sender is not the admin.\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Admin-only function to set price feeds.\\n     * @param underlyings Underlying token addresses for which to set price feeds.\\n     * @param feeds The Chainlink price feed contract addresses for each of `underlyings`.\\n     * @param baseCurrency The currency in which `feeds` are based.\\n     */\\n    function setPriceFeeds(address[] memory underlyings, address[] memory feeds, address baseCurrency)\\n        external\\n        onlyAdmin\\n    {\\n        // Input validation\\n        require(\\n            underlyings.length > 0 && underlyings.length == feeds.length,\\n            \\\"Lengths of both arrays must be equal and greater than 0.\\\"\\n        );\\n\\n        // For each token/feed\\n        for (uint256 i = 0; i < underlyings.length; i++) {\\n            address underlying = underlyings[i];\\n\\n            // Set feed and base currency\\n            priceFeeds[underlying] = AggregatorV3Interface(feeds[i]);\\n            feedBaseCurrencies[underlying] = baseCurrency;\\n        }\\n    }\\n\\n    /**\\n     * @dev Function returning the price in base currency of `underlying`.\\n     */\\n    function price(address underlying) external view override returns (uint256) {\\n        // Get token price from Chainlink\\n        AggregatorV3Interface feed = priceFeeds[underlying];\\n        require(address(feed) != address(0), \\\"No Chainlink price feed found for this underlying ERC20 token.\\\");\\n\\n        (uint80 roundId, int256 _price,, uint256 timestamp, uint80 answeredInRound) = feed.latestRoundData();\\n\\n        require(answeredInRound >= roundId, \\\"Stale price\\\");\\n        require(timestamp != 0, \\\"Round not complete\\\");\\n        require(_price > 0, \\\"invalid price\\\");\\n\\n        uint256 basePrice = BasePriceOracle(msg.sender).price(feedBaseCurrencies[underlying]);\\n\\n        return (uint256(_price) * 10 ** (18 - uint256(feed.decimals())) * basePrice) / 1e18;\\n    }\\n}\\n\",\"keccak256\":\"0x3b927931aae8f27c7f053fb3e78debce5eb80a5f96583d5316dcdebb54136005\",\"license\":\"UNLICENSED\"},\"contracts/citrus-oracle/src/interfaces/BasePriceOracle.sol\":{\"content\":\"// SPDX-License-Identifier: BSD-3-Clause\\npragma solidity 0.8;\\n\\nimport \\\"./PriceOracle.sol\\\";\\n\\ninterface BasePriceOracle is PriceOracle {\\n    /**\\n     * @notice Get the underlying price of a cToken asset\\n     * @param cToken The cToken to get the underlying price of\\n     * @return The underlying asset price mantissa (scaled by 1e18).\\n     *  Zero means the price is unavailable.\\n     */\\n    function getUnderlyingPrice(address cToken) external view returns (uint256);\\n\\n    /**\\n     * @notice Get the base currency of the oracle\\n     * @return The base currency against all currencies are priced against.\\n     */\\n    function baseCurrency() external view returns (address);\\n}\\n\",\"keccak256\":\"0xde2ebfef2b934a3949092eaa881313b3f19f7daa84f5802e97f2eb9fbde80f74\",\"license\":\"BSD-3-Clause\"},\"contracts/citrus-oracle/src/interfaces/PriceOracle.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8;\\n\\ninterface PriceOracle {\\n    /**\\n     * @notice Get the price of an underlying asset.\\n     * @param underlying The underlying asset to get the price of.\\n     * @return The underlying asset price in ETH as a mantissa (scaled by 1e18).\\n     * Zero means the price is unavailable.\\n     */\\n    function price(address underlying) external view returns (uint256);\\n}\\n\",\"keccak256\":\"0xd7a60dfab12fc66b9d346c38bbae621e372cfa1b8d013c68acff9bfc7dd1649b\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610ad2380380610ad283398101604081905261002f91610054565b600280546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610a3f806100936000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80638f283970146100675780639dcb511a1461007c578063a90a1fc3146100c2578063aea91078146100d5578063cebae71d146100f6578063f851a4401461011f575b600080fd5b61007a61007536600461068e565b610132565b005b6100a561008a36600461068e565b6000602081905290815260409020546001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b61007a6100d0366004610768565b6101ed565b6100e86100e336600461068e565b61036a565b6040519081526020016100b9565b6100a561010436600461068e565b6001602052600090815260409020546001600160a01b031681565b6002546100a5906001600160a01b031681565b6002546001600160a01b0316331461018c5760405162461bcd60e51b815260206004820152601860248201527729b2b73232b91034b9903737ba103a34329030b236b4b71760411b60448201526064015b60405180910390fd5b600280546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527ff9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc910160405180910390a15050565b6002546001600160a01b031633146102425760405162461bcd60e51b815260206004820152601860248201527729b2b73232b91034b9903737ba103a34329030b236b4b71760411b6044820152606401610183565b60008351118015610254575081518351145b6102c65760405162461bcd60e51b815260206004820152603860248201527f4c656e67746873206f6620626f746820617272617973206d757374206265206560448201527f7175616c20616e642067726561746572207468616e20302e00000000000000006064820152608401610183565b60005b83518110156103645760008482815181106102e6576102e66107dc565b60200260200101519050838281518110610302576103026107dc565b6020908102919091018101516001600160a01b039283166000908152808352604080822080549386166001600160a01b03199485161790556001909352919091208054928516929091169190911790558061035c81610808565b9150506102c9565b50505050565b6001600160a01b03808216600090815260208190526040812054909116806103fa5760405162461bcd60e51b815260206004820152603e60248201527f4e6f20436861696e6c696e6b207072696365206665656420666f756e6420666f60448201527f72207468697320756e6465726c79696e6720455243323020746f6b656e2e00006064820152608401610183565b600080600080846001600160a01b031663feaf968c6040518163ffffffff1660e01b815260040160a060405180830381865afa15801561043e573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610462919061083b565b9450945050935093508369ffffffffffffffffffff168169ffffffffffffffffffff1610156104c15760405162461bcd60e51b815260206004820152600b60248201526a5374616c6520707269636560a81b6044820152606401610183565b816000036105065760405162461bcd60e51b8152602060048201526012602482015271526f756e64206e6f7420636f6d706c65746560701b6044820152606401610183565b600083136105465760405162461bcd60e51b815260206004820152600d60248201526c696e76616c696420707269636560981b6044820152606401610183565b6001600160a01b038781166000908152600160205260408082205490516315d5220f60e31b81529216600483015290339063aea9107890602401602060405180830381865afa15801561059d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105c1919061088b565b9050670de0b6b3a764000081876001600160a01b031663313ce5676040518163ffffffff1660e01b8152600401602060405180830381865afa15801561060b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061062f91906108a4565b61063d9060ff1660126108c7565b61064890600a6109c4565b61065290876109d0565b61065c91906109d0565b61066691906109e7565b98975050505050505050565b80356001600160a01b038116811461068957600080fd5b919050565b6000602082840312156106a057600080fd5b6106a982610672565b9392505050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126106d757600080fd5b8135602067ffffffffffffffff808311156106f4576106f46106b0565b8260051b604051601f19603f83011681018181108482111715610719576107196106b0565b60405293845285810183019383810192508785111561073757600080fd5b83870191505b8482101561075d5761074e82610672565b8352918301919083019061073d565b979650505050505050565b60008060006060848603121561077d57600080fd5b833567ffffffffffffffff8082111561079557600080fd5b6107a1878388016106c6565b945060208601359150808211156107b757600080fd5b506107c4868287016106c6565b9250506107d360408501610672565b90509250925092565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b60006001820161081a5761081a6107f2565b5060010190565b805169ffffffffffffffffffff8116811461068957600080fd5b600080600080600060a0868803121561085357600080fd5b61085c86610821565b945060208601519350604086015192506060860151915061087f60808701610821565b90509295509295909350565b60006020828403121561089d57600080fd5b5051919050565b6000602082840312156108b657600080fd5b815160ff811681146106a957600080fd5b818103818111156108da576108da6107f2565b92915050565b600181815b8085111561091b578160001904821115610901576109016107f2565b8085161561090e57918102915b93841c93908002906108e5565b509250929050565b600082610932575060016108da565b8161093f575060006108da565b8160018114610955576002811461095f5761097b565b60019150506108da565b60ff841115610970576109706107f2565b50506001821b6108da565b5060208310610133831016604e8410600b841016171561099e575081810a6108da565b6109a883836108e0565b80600019048211156109bc576109bc6107f2565b029392505050565b60006106a98383610923565b80820281158282048414176108da576108da6107f2565b600082610a0457634e487b7160e01b600052601260045260246000fd5b50049056fea26469706673582212200d4c13ea17abb02690277ef07ae4230dd10c524912a02917c946eb9f245487de64736f6c63430008130033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80638f283970146100675780639dcb511a1461007c578063a90a1fc3146100c2578063aea91078146100d5578063cebae71d146100f6578063f851a4401461011f575b600080fd5b61007a61007536600461068e565b610132565b005b6100a561008a36600461068e565b6000602081905290815260409020546001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b61007a6100d0366004610768565b6101ed565b6100e86100e336600461068e565b61036a565b6040519081526020016100b9565b6100a561010436600461068e565b6001602052600090815260409020546001600160a01b031681565b6002546100a5906001600160a01b031681565b6002546001600160a01b0316331461018c5760405162461bcd60e51b815260206004820152601860248201527729b2b73232b91034b9903737ba103a34329030b236b4b71760411b60448201526064015b60405180910390fd5b600280546001600160a01b038381166001600160a01b031983168117909355604080519190921680825260208201939093527ff9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc910160405180910390a15050565b6002546001600160a01b031633146102425760405162461bcd60e51b815260206004820152601860248201527729b2b73232b91034b9903737ba103a34329030b236b4b71760411b6044820152606401610183565b60008351118015610254575081518351145b6102c65760405162461bcd60e51b815260206004820152603860248201527f4c656e67746873206f6620626f746820617272617973206d757374206265206560448201527f7175616c20616e642067726561746572207468616e20302e00000000000000006064820152608401610183565b60005b83518110156103645760008482815181106102e6576102e66107dc565b60200260200101519050838281518110610302576103026107dc565b6020908102919091018101516001600160a01b039283166000908152808352604080822080549386166001600160a01b03199485161790556001909352919091208054928516929091169190911790558061035c81610808565b9150506102c9565b50505050565b6001600160a01b03808216600090815260208190526040812054909116806103fa5760405162461bcd60e51b815260206004820152603e60248201527f4e6f20436861696e6c696e6b207072696365206665656420666f756e6420666f60448201527f72207468697320756e6465726c79696e6720455243323020746f6b656e2e00006064820152608401610183565b600080600080846001600160a01b031663feaf968c6040518163ffffffff1660e01b815260040160a060405180830381865afa15801561043e573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610462919061083b565b9450945050935093508369ffffffffffffffffffff168169ffffffffffffffffffff1610156104c15760405162461bcd60e51b815260206004820152600b60248201526a5374616c6520707269636560a81b6044820152606401610183565b816000036105065760405162461bcd60e51b8152602060048201526012602482015271526f756e64206e6f7420636f6d706c65746560701b6044820152606401610183565b600083136105465760405162461bcd60e51b815260206004820152600d60248201526c696e76616c696420707269636560981b6044820152606401610183565b6001600160a01b038781166000908152600160205260408082205490516315d5220f60e31b81529216600483015290339063aea9107890602401602060405180830381865afa15801561059d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105c1919061088b565b9050670de0b6b3a764000081876001600160a01b031663313ce5676040518163ffffffff1660e01b8152600401602060405180830381865afa15801561060b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061062f91906108a4565b61063d9060ff1660126108c7565b61064890600a6109c4565b61065290876109d0565b61065c91906109d0565b61066691906109e7565b98975050505050505050565b80356001600160a01b038116811461068957600080fd5b919050565b6000602082840312156106a057600080fd5b6106a982610672565b9392505050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126106d757600080fd5b8135602067ffffffffffffffff808311156106f4576106f46106b0565b8260051b604051601f19603f83011681018181108482111715610719576107196106b0565b60405293845285810183019383810192508785111561073757600080fd5b83870191505b8482101561075d5761074e82610672565b8352918301919083019061073d565b979650505050505050565b60008060006060848603121561077d57600080fd5b833567ffffffffffffffff8082111561079557600080fd5b6107a1878388016106c6565b945060208601359150808211156107b757600080fd5b506107c4868287016106c6565b9250506107d360408501610672565b90509250925092565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b60006001820161081a5761081a6107f2565b5060010190565b805169ffffffffffffffffffff8116811461068957600080fd5b600080600080600060a0868803121561085357600080fd5b61085c86610821565b945060208601519350604086015192506060860151915061087f60808701610821565b90509295509295909350565b60006020828403121561089d57600080fd5b5051919050565b6000602082840312156108b657600080fd5b815160ff811681146106a957600080fd5b818103818111156108da576108da6107f2565b92915050565b600181815b8085111561091b578160001904821115610901576109016107f2565b8085161561090e57918102915b93841c93908002906108e5565b509250929050565b600082610932575060016108da565b8161093f575060006108da565b8160018114610955576002811461095f5761097b565b60019150506108da565b60ff841115610970576109706107f2565b50506001821b6108da565b5060208310610133831016604e8410600b841016171561099e575081810a6108da565b6109a883836108e0565b80600019048211156109bc576109bc6107f2565b029392505050565b60006106a98383610923565b80820281158282048414176108da576108da6107f2565b600082610a0457634e487b7160e01b600052601260045260246000fd5b50049056fea26469706673582212200d4c13ea17abb02690277ef07ae4230dd10c524912a02917c946eb9f245487de64736f6c63430008130033",
+  "devdoc": {
+    "author": "David Lucid <david@rari.capital> (https://github.com/davidlucid) Changes by Citrus team: - remove hardcoded base currencies, uses the master oracle instead",
+    "details": "Implements `PriceOracle`.",
+    "events": {
+      "NewAdmin(address,address)": {
+        "details": "Event emitted when `admin` is changed."
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "changeAdmin(address)": {
+        "details": "Changes the admin and emits an event."
+      },
+      "constructor": {
+        "details": "Constructor to set admin and canAdminOverwrite."
+      },
+      "price(address)": {
+        "details": "Function returning the price in base currency of `underlying`."
+      },
+      "setPriceFeeds(address[],address[],address)": {
+        "details": "Admin-only function to set price feeds.",
+        "params": {
+          "baseCurrency": "The currency in which `feeds` are based.",
+          "feeds": "The Chainlink price feed contract addresses for each of `underlyings`.",
+          "underlyings": "Underlying token addresses for which to set price feeds."
+        }
+      }
+    },
+    "stateVariables": {
+      "admin": {
+        "details": "The administrator of this `MasterPriceOracle`."
+      }
+    },
+    "title": "ChainlinkPriceOracle",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "feedBaseCurrencies(address)": {
+        "notice": "Maps ERC20 token addresses to enums indicating the base currency of the feed."
+      },
+      "priceFeeds(address)": {
+        "notice": "Maps ERC20 token addresses to ETH-based Chainlink price feed contracts."
+      }
+    },
+    "notice": "Returns prices from Chainlink.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 9030,
+        "contract": "contracts/citrus-oracle/src/ChainlinkPriceOracle.sol:ChainlinkPriceOracle",
+        "label": "priceFeeds",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_contract(AggregatorV3Interface)4639)"
+      },
+      {
+        "astId": 9035,
+        "contract": "contracts/citrus-oracle/src/ChainlinkPriceOracle.sol:ChainlinkPriceOracle",
+        "label": "feedBaseCurrencies",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_address)"
+      },
+      {
+        "astId": 9038,
+        "contract": "contracts/citrus-oracle/src/ChainlinkPriceOracle.sol:ChainlinkPriceOracle",
+        "label": "admin",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(AggregatorV3Interface)4639": {
+        "encoding": "inplace",
+        "label": "contract AggregatorV3Interface",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_address)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_address,t_contract(AggregatorV3Interface)4639)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => contract AggregatorV3Interface)",
+        "numberOfBytes": "32",
+        "value": "t_contract(AggregatorV3Interface)4639"
+      }
+    }
+  }
+}

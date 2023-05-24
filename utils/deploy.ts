@@ -1,5 +1,5 @@
 import hardhat, { deployments, getUnnamedAccounts } from 'hardhat'
-import { DeployResult } from 'hardhat-deploy/types'
+import { DeployResult, ProxyOptions } from 'hardhat-deploy/types'
 import { isLocalhost } from './env'
 import { assertUpgradeIsSafe } from './storageLayout'
 
@@ -12,6 +12,7 @@ export default async function deploy(
     skipIfSameBytecode?: boolean
     skipIfAlreadyDeployed?: boolean
     deterministicDeployment?: string | boolean | undefined
+    proxy?: string | boolean | ProxyOptions | undefined
   }
 ): Promise<DeployResult> {
   const { deploy } = deployments
@@ -46,6 +47,7 @@ export default async function deploy(
     args: options.args,
     skipIfAlreadyDeployed: options.skipIfAlreadyDeployed,
     deterministicDeployment: options.deterministicDeployment,
+    proxy: options.proxy,
   })
 
   return result

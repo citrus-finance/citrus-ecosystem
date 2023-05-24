@@ -35,6 +35,7 @@ const sourcePaths = [
   '!contracts/ERC4626-router/src/test/**/*.sol',
   '!contracts/ERC4626-router/lib/solmate/src/test/**/*.sol',
   'contracts/rari-fuse/src/**/*.sol',
+  'contracts/citrus-oracle/**/*.sol',
   '!**/ds-test/**/*.sol',
   '!**/forge-std/**/*.sol',
   '!**/*.t.sol',
@@ -91,6 +92,17 @@ function getRemappings(filePath: string): string[][] {
 
 const config: HardhatUserConfig = {
   solidity: {
+    overrides: {
+      'contracts/rari-fuse/src/core/CErc20Delegate.sol': {
+        version: '0.5.17',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 150,
+          },
+        },
+      },
+    },
     compilers: [
       {
         version: '0.5.17',
@@ -121,6 +133,15 @@ const config: HardhatUserConfig = {
       },
       {
         version: '0.8.10',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: '0.8.19',
         settings: {
           optimizer: {
             enabled: true,

@@ -6,12 +6,9 @@ import { getUnnamedAccounts } from 'hardhat'
 import { Interface, getCreate2Address, keccak256, solidityKeccak256 } from 'ethers/lib/utils'
 import { BigNumber } from 'ethers'
 import deploy from '../utils/deploy'
-import getTimelockAddress from '../utils/getTimelockAddress'
+import writeAllOutput from '../utils/writeAllOutput'
 
 const deployGovernance: DeployFunction = async function deployGovernance({}: HardhatRuntimeEnvironment) {
-  const [deployer] = await getUnnamedAccounts()
-  const ethers = getEthers()
-
   // TODO: deploy Citrus token
 
   // Deploy multisig
@@ -26,6 +23,8 @@ const deployGovernance: DeployFunction = async function deployGovernance({}: Har
     skipUpgradeSafety: true,
     deterministicDeployment: true,
   })
+
+  writeAllOutput('timelock', timelock.address)
 }
 
 export default deployGovernance
