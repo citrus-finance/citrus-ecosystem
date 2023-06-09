@@ -13,7 +13,7 @@
         "asset": {
           "name": "Wrapped XDAI",
           "symbol": "WXDAI",
-          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
           "isWrappedNative": true
         },
         "withdrawalFeePercentage": 0.1,
@@ -66,6 +66,18 @@
         },
         "withdrawalFeePercentage": 0.1,
         "harvestFeePercentage": 5
+      },
+      {
+        "address": "0xed538CC614208F66ac1c087fB4FA37532D47a5b6",
+        "name": "WXDAI on RMM",
+        "asset": {
+          "name": "Wrapped XDAI",
+          "symbol": "WXDAI",
+          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+          "isWrappedNative": true
+        },
+        "withdrawalFeePercentage": 0,
+        "harvestFeePercentage": 0
       }
     ]
   },

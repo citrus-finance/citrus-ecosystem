@@ -76,6 +76,20 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
             skipUpgradeSafety: true,
           })
         }
+
+        case 'aave-v2': {
+          return deploy(vault.name.replaceAll(' ', ''), 'Aave2Vault', {
+            args: [
+              assetAddress,
+              `Citrus ${vault.name} Vault`,
+              vault.symbol,
+              vault.lendingPool,
+              vault.incentivesController,
+            ],
+            skipIfAlreadyDeployed: true,
+            skipUpgradeSafety: true,
+          })
+        }
       }
     })()
 
@@ -138,8 +152,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
       }
     }
 
-    const isLeveraged = ['aave-v2-leveraged'].includes(vault.type)
-    if (isLeveraged) {
+    if (vault.type === 'aave-v2-leveraged') {
       const actualMaxCollateralRatio = await view(
         vaultDeployment.address,
         'LeveragedLendingVault',

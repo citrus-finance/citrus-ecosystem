@@ -17,7 +17,7 @@
         "name": "Leveraged WXDAI on Agave",
         "symbol": "clvagWXDAI",
         "type": "aave-v2-leveraged",
-        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
         "maxCollateralRatio": 0.75,
         "targetCollateralRatio": 0.73,
         "withdrawalFee": 0.001,
@@ -76,6 +76,17 @@
         "harvestFee": 0.05,
         "lendingPool": "0x5E15d5E33d318dCEd84Bfe3F4EACe07909bE6d9c",
         "incentivesController": "0xfa255f5104f129B78f477e9a6D050a02f31A5D86"
+      },
+      {
+        "asset": "WXDAI",
+        "name": "WXDAI on RMM",
+        "symbol": "crmmWXDAI",
+        "type": "aave-v2",
+        "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+        "withdrawalFee": 0,
+        "harvestFee": 0,
+        "lendingPool": "0x5B8D36De471880Ee21936f328AAB2383a280CB2A",
+        "incentivesController": "0x0000000000000000000000000000000000000000"
       }
     ]
   },
