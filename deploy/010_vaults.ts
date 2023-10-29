@@ -56,7 +56,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
     const vaultDeployment = await (async () => {
       switch (vault.type) {
         case 'mock': {
-          return deploy(vault.name.replaceAll(' ', ''), 'MockERC4626', {
+          return deploy(fixVaultName(vault.name), 'MockERC4626', {
             args: [assetAddress, `Citrus ${vault.name} Vault`, vault.symbol],
             skipIfAlreadyDeployed: true,
             skipUpgradeSafety: true,
@@ -64,7 +64,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
         }
 
         case 'aave-v2-leveraged': {
-          return deploy(vault.name.replaceAll(' ', ''), 'Aave2LeveragedVault', {
+          return deploy(fixVaultName(vault.name), 'Aave2LeveragedVault', {
             args: [
               assetAddress,
               `Citrus ${vault.name} Vault`,
@@ -77,8 +77,23 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
           })
         }
 
+        case 'aave-v2-erc4626-leveraged': {
+          return deploy(fixVaultName(vault.name), 'Aave2ERC4626LeveragedVault', {
+            args: [
+              assetAddress,
+              `Citrus ${vault.name} Vault`,
+              vault.symbol,
+              vault.lendingPool,
+              vault.incentivesController,
+              vault.vault,
+            ],
+            skipIfAlreadyDeployed: true,
+            skipUpgradeSafety: true,
+          })
+        }
+
         case 'aave-v2': {
-          return deploy(vault.name.replaceAll(' ', ''), 'Aave2Vault', {
+          return deploy(fixVaultName(vault.name), 'Aave2Vault', {
             args: [
               assetAddress,
               `Citrus ${vault.name} Vault`,
@@ -200,3 +215,7 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
 export default deployVaults
 deployVaults.id = '010_vaults'
 deployVaults.tags = []
+
+function fixVaultName(name: string): string {
+  return name.replaceAll(/[ //]/g, '')
+}

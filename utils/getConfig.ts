@@ -21,6 +21,11 @@ interface Aave2LeveragedVault extends BaseVault {
   incentivesController: string
 }
 
+interface Aave2ERC4626LeveragedVault extends Omit<Aave2LeveragedVault, 'type'> {
+  type: 'aave-v2-erc4626-leveraged'
+  vault: string
+}
+
 interface Aave2Vault extends BaseVault {
   type: 'aave-v2'
   lendingPool: string
@@ -42,7 +47,7 @@ interface Config {
   vault: {
     manager: string
     feeTaker: string
-    vaults: (Aave2LeveragedVault | MockVault | Aave2Vault)[]
+    vaults: (Aave2LeveragedVault | MockVault | Aave2Vault | Aave2ERC4626LeveragedVault)[]
   }
   oracle: {
     tokens: {

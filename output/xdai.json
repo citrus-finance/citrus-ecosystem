@@ -78,6 +78,18 @@
         },
         "withdrawalFeePercentage": 0,
         "harvestFeePercentage": 0
+      },
+      {
+        "address": "0xd6c3c92a47Cd8f21e7c4B660951941249cBeb90C",
+        "name": "Leveraged WXDAI/sDai on Agave",
+        "asset": {
+          "name": "Wrapped XDAI",
+          "symbol": "WXDAI",
+          "iconUrl": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/logo.png",
+          "isWrappedNative": true
+        },
+        "withdrawalFeePercentage": 0.1,
+        "harvestFeePercentage": 0
       }
     ]
   },
