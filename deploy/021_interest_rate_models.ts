@@ -41,6 +41,7 @@ const deployInterestRateModels: DeployFunction =
 export default deployInterestRateModels
 deployInterestRateModels.id = '021_interest_rate_models'
 deployInterestRateModels.tags = []
+deployInterestRateModels.skip = async () => true
 
 const ONE = numberToMantissa(1)
 

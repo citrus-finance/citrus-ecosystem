@@ -159,6 +159,7 @@ const deployOracle: DeployFunction = async function deployOracle({}: HardhatRunt
 export default deployOracle
 deployOracle.id = '004_oracle'
 deployOracle.tags = []
+deployOracle.skip = async () => true
 
 function numberToAddress(num: number): string {
   return `0x${num.toFixed().padStart(40, '0')}`

@@ -94,3 +94,4 @@ const deployLendingMarket: DeployFunction = async function deployLendingMarket({
 export default deployLendingMarket
 deployLendingMarket.id = '020_lending_market'
 deployLendingMarket.tags = []
+deployLendingMarket.skip = async () => true
