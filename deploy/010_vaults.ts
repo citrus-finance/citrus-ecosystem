@@ -167,7 +167,8 @@ const deployVaults: DeployFunction = async function deployVaults({}: HardhatRunt
       }
     }
 
-    if (vault.type === 'aave-v2-leveraged') {
+    const isLeveraged = vault.type === 'aave-v2-leveraged' || vault.type === 'aave-v2-erc4626-leveraged'
+    if (isLeveraged) {
       const actualMaxCollateralRatio = await view(
         vaultDeployment.address,
         'LeveragedLendingVault',

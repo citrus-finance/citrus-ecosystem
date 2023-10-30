@@ -30,6 +30,7 @@ const deployGovernance: DeployFunction = async function deployGovernance({}: Har
 export default deployGovernance
 deployGovernance.id = '002_governance'
 deployGovernance.tags = []
+deployGovernance.skip = async () => true
 
 async function deployMultisig(defaultMultisigOwners: string[], threshold: number): Promise<string> {
   const [deployer] = await getUnnamedAccounts()
